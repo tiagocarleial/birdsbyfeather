@@ -5,15 +5,31 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gray-900">
       {/* Header */}
-      <header className="border-b border-gray-800 bg-gray-900/50 backdrop-blur-sm">
+      <header className="border-b border-gray-800 bg-gray-900/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold text-white">Birds by Feather</h1>
-            <nav className="flex gap-4">
-              <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
+            <Link href="/" className="flex items-center gap-2 group hover:opacity-80 transition-opacity">
+              <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-emerald-700 rounded-lg flex items-center justify-center">
+                <i className="fa-solid fa-dove text-white text-xl"></i>
+              </div>
+              <div>
+                <div className="text-white font-bold text-lg leading-tight">Birds by Feather</div>
+                <div className="text-green-400 text-xs">Live Nest Cameras</div>
+              </div>
+            </Link>
+            <nav className="flex gap-6">
+              <Link href="/" className="text-gray-400 hover:text-white transition-colors font-medium flex items-center gap-2">
+                <i className="fa-solid fa-home"></i>
+                Home
+              </Link>
+              <Link href="/#nests" className="text-gray-400 hover:text-white transition-colors font-medium flex items-center gap-2">
+                <i className="fa-solid fa-video"></i>
+                Nests
+              </Link>
+              <Link href="/about" className="text-gray-400 hover:text-white transition-colors font-medium">
                 About
               </Link>
-              <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
+              <Link href="/contact" className="text-gray-400 hover:text-white transition-colors font-medium">
                 Contact
               </Link>
             </nav>
@@ -23,28 +39,59 @@ export default function HomePage() {
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Page Title */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Live Bird Cameras
+          <div id="nests" className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-6">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              <span className="text-green-400 font-semibold text-sm">LIVE NOW</span>
+            </div>
+
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Watch Nature's Most<br />
+              <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+                Beautiful Moments
+              </span>
             </h2>
-            <p className="text-xl text-gray-400">
-              Watch magnificent birds in their natural habitat
+
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+              Experience the wonder of wildlife from your home. Watch magnificent birds build nests,
+              raise their young, and thrive in their natural habitat—all streaming live, 24/7.
             </p>
+
+            <div className="flex items-center justify-center gap-8 mt-8 text-sm text-gray-500">
+              <div className="flex items-center gap-2">
+                <i className="fa-solid fa-circle-play text-green-500"></i>
+                <span>24/7 Live Streams</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <i className="fa-solid fa-globe text-blue-500"></i>
+                <span>Multiple Locations</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <i className="fa-solid fa-hd-video text-purple-500"></i>
+                <span>HD Quality</span>
+              </div>
+            </div>
           </div>
 
           {/* Bird Camera Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <BirdsHomeCam
+              id="dale-hollow-eagle"
+              number={1}
               species="Bald Eagle"
               liveUrl="https://www.youtube.com/@DaleHollowEagleCamera/live"
               title="Dale Hollow Eagle Nest"
               description="Watch majestic bald eagles in their natural habitat. Observe these powerful birds of prey as they nest, hunt, and raise their young."
               location="Dale Hollow, USA"
+              thumbnail="https://i.ytimg.com/vi/8aaFcTNcCLA/maxresdefault.jpg"
+              channelName="Dale Hollow Eagle Camera"
             />
 
             <BirdsHomeCam
+              id="osprey-carnyx"
+              number={2}
               species="Osprey"
               liveUrl="https://www.youtube.com/@CarnyxWildTwo/live"
               title="Osprey Nest Live Cam"
@@ -52,6 +99,45 @@ export default function HomePage() {
               location="Wildlife Area"
               thumbnail="https://i.ytimg.com/vi/1JmvBGTkxbE/hqdefault.jpg"
               videoId="1JmvBGTkxbE"
+              channelName="Carnyx Wild Two"
+            />
+
+            <BirdsHomeCam
+              id="garden-birds-nest"
+              number={3}
+              species="Blue Tit"
+              liveUrl="https://www.youtube.com/@NestCamLive/live"
+              title="Blue Tit Nest Cam"
+              description="Watch beautiful blue tits in their nest box. Observe these colorful, energetic songbirds as they build nests, incubate eggs, and raise their young."
+              location="Garden Nest Box"
+              thumbnail="https://i.ytimg.com/vi/_8TEuV4qaHo/hqdefault.jpg"
+              channelName="Nest Cam Live"
+            />
+
+            <BirdsHomeCam
+              id="forestry-england-osprey"
+              number={4}
+              species="Osprey"
+              liveUrl="https://www.youtube.com/@ForestryEngland/live"
+              title="Forestry England Osprey Nest"
+              description="Watch ospreys in a stunning UK forest setting. Observe these magnificent fish hawks as they raise their young in a nest managed by Forestry England."
+              location="United Kingdom"
+              thumbnail="https://i.ytimg.com/vi/d2HIkb2BHdw/hq720.jpg"
+              videoId="d2HIkb2BHdw"
+              channelName="Forestry England"
+            />
+
+            <BirdsHomeCam
+              id="fobb-bald-eagle"
+              number={5}
+              species="Bald Eagle"
+              liveUrl="https://www.youtube.com/@FOBBVCAM/live"
+              title="FOBB Bald Eagle Nest"
+              description="Watch a magnificent bald eagle pair at their nest. Observe these powerful raptors as they care for their nest, hunt, and raise their eaglets throughout the breeding season."
+              location="USA"
+              thumbnail="https://i.ytimg.com/vi/B4-L2nfGcuE/hqdefault.jpg"
+              videoId="B4-L2nfGcuE"
+              channelName="FOBBVCAM"
             />
           </div>
         </div>
