@@ -19,12 +19,12 @@ export default function BirdsHomeCam({
 }: BirdsHomeCamProps) {
   const [modalOpen, setModalOpen] = useState(false);
 
-  // Convert YouTube URL to embed format
+  // Convert YouTube URL to embed format with autoplay
   const getEmbedUrl = (url: string): string => {
     // Extract channel ID from @username URL
     // For @DaleHollowEagleCamera -> channel ID is UClW_2-fZBUJbaFPR9OFlSCA
     if (url.includes('@DaleHollowEagleCamera')) {
-      return 'https://www.youtube.com/embed/live_stream?channel=UClW_2-fZBUJbaFPR9OFlSCA';
+      return 'https://www.youtube.com/embed/live_stream?channel=UClW_2-fZBUJbaFPR9OFlSCA&autoplay=1';
     }
 
     // Fallback: return url as-is
