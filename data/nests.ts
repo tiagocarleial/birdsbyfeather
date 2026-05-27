@@ -308,4 +308,27 @@ export const birdNests: BirdNest[] = [
       offspring: [],
     },
   },
+  {
+    id: 'kestrel-nest-2',
+    name: 'Kestrel Nest Live Cam',
+    species: 'Common Kestrel',
+    location: 'Netherlands',
+    liveUrl: 'https://www.youtube.com/@torenvalk_NL/live',
+    youtubeId: 'G8lAvNqZvb4',
+    status: 'active',
+    description: 'Watch common kestrels in their natural nest in the Netherlands. Observe these agile falcons known for their distinctive hovering hunting technique as they raise their young in a tower nest.',
+    family: {
+      parents: [
+        {
+          name: 'Male Kestrel',
+          description: 'The male kestrel has distinctive blue-grey head and tail feathers with spotted rufous back. He hunts tirelessly for small mammals and insects to feed the family.',
+        },
+        {
+          name: 'Female Kestrel',
+          description: 'The female kestrel has beautiful rufous-brown plumage with black barring. She is the primary caretaker of the nest and incubates the eggs.',
+        },
+      ],
+      offspring: [],
+    },
+  },
 ];

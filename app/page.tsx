@@ -19,11 +19,11 @@ function shuffleArray<T>(array: T[]): T[] {
 
 export default function HomePage() {
   const [selectedSpecies, setSelectedSpecies] = useState<string>('all');
-  const [randomizedNests, setRandomizedNests] = useState(birdNests.slice(0, 12));
+  const [randomizedNests, setRandomizedNests] = useState(birdNests.slice(0, 13));
 
   // Shuffle only on client-side after mount to avoid hydration mismatch
   useEffect(() => {
-    setRandomizedNests(shuffleArray(birdNests.slice(0, 12)));
+    setRandomizedNests(shuffleArray(birdNests.slice(0, 13)));
   }, []);
 
   // Get unique species
