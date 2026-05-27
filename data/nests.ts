@@ -313,8 +313,8 @@ export const birdNests: BirdNest[] = [
     name: 'Kestrel Nest Live Cam',
     species: 'Common Kestrel',
     location: 'Netherlands',
-    liveUrl: 'https://www.youtube.com/@torenvalk_NL/live',
-    youtubeId: 'G8lAvNqZvb4',
+    liveUrl: 'https://www.youtube.com/channel/UCGENkSG26zqbIvNK91L6gEg/live',
+    youtubeId: 'Tpu3qAh4S0k',
     status: 'active',
     description: 'Watch common kestrels in their natural nest in the Netherlands. Observe these agile falcons known for their distinctive hovering hunting technique as they raise their young in a tower nest.',
     family: {
