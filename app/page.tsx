@@ -46,7 +46,7 @@ export default function HomePage() {
 
             <BirdsHomeCam
               species="Osprey"
-              liveUrl="https://www.youtube.com/embed/live_stream?channel=UCdWFtpx_DaPxESyk0DmFtRg"
+              liveUrl="https://www.youtube.com/@CarnyxWildTwo/live"
               title="Osprey Nest Live Cam"
               description="Watch ospreys, magnificent fish-eating raptors, in their natural habitat. Observe their impressive fishing skills and parenting behaviors."
               location="Wildlife Area"

@@ -23,14 +23,14 @@ export default function BirdsHomeCam({
 
   // Convert YouTube URL to embed format with autoplay
   const getEmbedUrl = (url: string): string => {
-    // Extract channel ID from URL or use direct embed URL
+    // Extract channel ID from @username URL
     if (url.includes('@DaleHollowEagleCamera')) {
       return 'https://www.youtube.com/embed/live_stream?channel=UClW_2-fZBUJbaFPR9OFlSCA&autoplay=1';
     }
 
-    // For Osprey channel
-    if (url.includes('UCdWFtpx_DaPxESyk0DmFtRg')) {
-      return 'https://www.youtube.com/embed/live_stream?channel=UCdWFtpx_DaPxESyk0DmFtRg&autoplay=1';
+    // For Osprey - @CarnyxWildTwo
+    if (url.includes('@CarnyxWildTwo') || url.includes('@CarnyxWild')) {
+      return 'https://www.youtube.com/embed/live_stream?channel=UCzb2wqPoBecAyANKCD-Jl6A&autoplay=1';
     }
 
     // If it's already an embed URL, return as-is
