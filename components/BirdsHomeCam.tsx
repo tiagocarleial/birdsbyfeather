@@ -9,6 +9,7 @@ interface BirdsHomeCamProps {
   description: string;
   location: string;
   thumbnail?: string;
+  videoId?: string; // Fallback video ID if live_stream doesn't work
 }
 
 export default function BirdsHomeCam({
@@ -18,28 +19,34 @@ export default function BirdsHomeCam({
   description,
   location,
   thumbnail,
+  videoId,
 }: BirdsHomeCamProps) {
   const [modalOpen, setModalOpen] = useState(false);
 
   // Convert YouTube URL to embed format with autoplay
-  const getEmbedUrl = (url: string): string => {
+  const getEmbedUrl = (): string => {
+    // If videoId is provided, use it directly (always works)
+    if (videoId) {
+      return `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    }
+
     // Extract channel ID from @username URL
-    if (url.includes('@DaleHollowEagleCamera')) {
+    if (liveUrl.includes('@DaleHollowEagleCamera')) {
       return 'https://www.youtube.com/embed/live_stream?channel=UClW_2-fZBUJbaFPR9OFlSCA&autoplay=1';
     }
 
-    // For Osprey - @CarnyxWildTwo
-    if (url.includes('@CarnyxWildTwo') || url.includes('@CarnyxWild')) {
+    // For Osprey - @CarnyxWildTwo (may not support embedding)
+    if (liveUrl.includes('@CarnyxWildTwo') || liveUrl.includes('@CarnyxWild')) {
       return 'https://www.youtube.com/embed/live_stream?channel=UCzb2wqPoBecAyANKCD-Jl6A&autoplay=1';
     }
 
     // If it's already an embed URL, return as-is
-    if (url.includes('/embed/')) {
-      return url;
+    if (liveUrl.includes('/embed/')) {
+      return liveUrl;
     }
 
     // Fallback: return url as-is
-    return url;
+    return liveUrl;
   };
 
   return (
@@ -118,7 +125,7 @@ export default function BirdsHomeCam({
             <div className="aspect-video bg-black rounded-lg overflow-hidden">
               <iframe
                 className="w-full h-full"
-                src={getEmbedUrl(liveUrl)}
+                src={getEmbedUrl()}
                 title={title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

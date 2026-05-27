@@ -51,6 +51,7 @@ export default function HomePage() {
               description="Watch ospreys, magnificent fish-eating raptors, in their natural habitat. Observe their impressive fishing skills and parenting behaviors."
               location="Wildlife Area"
               thumbnail="https://i.ytimg.com/vi/1JmvBGTkxbE/hqdefault.jpg"
+              videoId="1JmvBGTkxbE"
             />
           </div>
         </div>
