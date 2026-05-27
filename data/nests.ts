@@ -315,6 +315,7 @@ export const birdNests: BirdNest[] = [
     location: 'Netherlands',
     liveUrl: 'https://www.youtube.com/channel/UCGENkSG26zqbIvNK91L6gEg/live',
     youtubeId: 'Tpu3qAh4S0k',
+    thumbnail: 'https://i.ytimg.com/vi/G8lAvNqZvb4/hqdefault.jpg',
     status: 'active',
     description: 'Watch common kestrels in their natural nest in the Netherlands. Observe these agile falcons known for their distinctive hovering hunting technique as they raise their young in a tower nest.',
     family: {
