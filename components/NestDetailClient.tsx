@@ -49,11 +49,26 @@ export default function NestDetailClient({ nest }: NestDetailClientProps) {
 
     // If it's already a full URL (liveUrl case)
     if (url.startsWith('http')) {
-      // Convert various YouTube URL formats to embed format
+      // For /live URLs, we need to use a different approach
       if (url.includes('/live')) {
-        // e.g., youtube.com/@channel/live -> youtube.com/embed/live_stream?channel=...
-        // For now, just return the URL as-is for iframe src
-        return url.replace('/live', '/embed/live');
+        // Extract channel info from URL
+        // Format: youtube.com/@username/live OR youtube.com/channel/ID/live
+
+        if (url.includes('/@')) {
+          // @username format - use live_stream with channel parameter
+          const username = url.split('/@')[1].split('/')[0];
+          // For @username, we'll use the direct live URL in iframe
+          // YouTube allows embedding /live URLs directly
+          return url;
+        } else if (url.includes('/channel/')) {
+          // channel/ID format
+          const channelId = url.split('/channel/')[1].split('/')[0];
+          // Use the live_stream endpoint with channel parameter
+          return `https://www.youtube.com/embed/live_stream?channel=${channelId}`;
+        }
+
+        // Fallback: return URL as-is
+        return url;
       }
       return url;
     }
