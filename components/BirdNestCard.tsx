@@ -8,10 +8,36 @@ interface BirdNestCardProps {
   nest: BirdNest;
 }
 
+// Get embed URL - same logic as NestDetailClient
+function getEmbedUrl(url: string | undefined): string {
+  if (!url) return '';
+
+  // If it's already a full URL (liveUrl case)
+  if (url.startsWith('http')) {
+    // For /live URLs, we need to use a different approach
+    if (url.includes('/live')) {
+      if (url.includes('/@')) {
+        // @username format - use direct URL in iframe
+        return url;
+      } else if (url.includes('/channel/')) {
+        // channel/ID format - convert to live_stream endpoint
+        const channelId = url.split('/channel/')[1].split('/')[0];
+        return `https://www.youtube.com/embed/live_stream?channel=${channelId}`;
+      }
+      return url;
+    }
+    return url;
+  }
+
+  // Otherwise it's a video ID
+  return `https://www.youtube.com/embed/${url}`;
+}
+
 export default function BirdNestCard({ nest }: BirdNestCardProps) {
   const [videoModalOpen, setVideoModalOpen] = useState(false);
-  // Use youtubeId as primary (static video ID that always works)
-  const [selectedCamera, setSelectedCamera] = useState(nest.youtubeId || '');
+  // Use liveUrl if available, otherwise fall back to youtubeId
+  const primaryUrl = nest.liveUrl || nest.youtubeId || '';
+  const [selectedCamera, setSelectedCamera] = useState(primaryUrl);
   const [thumbnailAttempt, setThumbnailAttempt] = useState(0);
 
   // Multiple fallback options for YouTube thumbnails
@@ -156,28 +182,32 @@ export default function BirdNestCard({ nest }: BirdNestCardProps) {
             {/* Camera Selection */}
             {hasMultipleCameras && (
               <div className="mb-4 flex gap-2 justify-center">
-                {nest.cameras?.map((camera) => (
-                  <button
-                    key={camera.id}
-                    onClick={() => setSelectedCamera(camera.youtubeId || '')}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all ${
-                      selectedCamera === camera.youtubeId
-                        ? 'bg-green-600 text-white'
-                        : 'bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white'
-                    }`}
-                  >
-                    <i className="fa-solid fa-video mr-2"></i>
-                    {camera.name}
-                  </button>
-                ))}
+                {nest.cameras?.map((camera) => {
+                  const cameraUrl = camera.liveUrl || camera.youtubeId || '';
+                  return (
+                    <button
+                      key={camera.id}
+                      onClick={() => setSelectedCamera(cameraUrl)}
+                      className={`px-4 py-2 rounded-lg font-medium transition-all ${
+                        selectedCamera === cameraUrl
+                          ? 'bg-green-600 text-white'
+                          : 'bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white'
+                      }`}
+                    >
+                      <i className="fa-solid fa-video mr-2"></i>
+                      {camera.name}
+                    </button>
+                  );
+                })}
               </div>
             )}
 
             {/* Video Player */}
             <div className="aspect-video">
               <iframe
+                key={selectedCamera}
                 className="w-full h-full rounded-lg"
-                src={`https://www.youtube.com/embed/${selectedCamera}?autoplay=1`}
+                src={`${getEmbedUrl(selectedCamera)}?autoplay=1`}
                 title={nest.name}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
