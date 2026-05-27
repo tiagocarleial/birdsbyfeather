@@ -139,6 +139,97 @@ export default function HomePage() {
               videoId="B4-L2nfGcuE"
               channelName="FOBBVCAM"
             />
+
+            <BirdsHomeCam
+              id="uist-white-tailed-eagle"
+              number={6}
+              species="White-tailed Eagle"
+              liveUrl="https://www.youtube.com/@uistforestretreat/live"
+              title="Uist White-tailed Eagle Nest"
+              description="Watch the magnificent white-tailed eagles at their nest in Scotland. Observe these impressive sea eagles as they care for their young in the beautiful Scottish Highlands."
+              location="Scotland, UK"
+              thumbnail="https://i.ytimg.com/vi/aivQQnNPwZ8/hqdefault.jpg"
+              videoId="aivQQnNPwZ8"
+              channelName="Uist Forest Retreat"
+            />
+
+            <BirdsHomeCam
+              id="explore-osprey"
+              number={7}
+              species="Osprey"
+              liveUrl="https://www.youtube.com/@ExploreOspreyandFalcons/live"
+              title="Explore Osprey Nest Cam"
+              description="Watch ospreys at their nest through this dedicated wildlife camera. Observe these skilled fish hunters as they raise their young and demonstrate their impressive fishing abilities."
+              location="Wildlife Area"
+              thumbnail="https://i.ytimg.com/vi/3VVoYO-ZFPE/hqdefault.jpg"
+              videoId="3VVoYO-ZFPE"
+              channelName="Explore Osprey and Falcons"
+            />
+
+            <BirdsHomeCam
+              id="bad-salzungen-stork"
+              number={8}
+              species="White Stork"
+              liveUrl="https://www.youtube.com/@StadtverwaltungBadSalzungen/live"
+              title="Bad Salzungen Stork Nest"
+              description="Watch white storks at their nest in Bad Salzungen, Germany. Observe these iconic birds as they raise their young on historic rooftops in this charming German town."
+              location="Bad Salzungen, Germany"
+              thumbnail="https://i.ytimg.com/vi/Dr5zebXpO-M/hqdefault.jpg"
+              videoId="Dr5zebXpO-M"
+              channelName="Stadtverwaltung Bad Salzungen"
+            />
+
+            <BirdsHomeCam
+              id="dna-stork"
+              number={9}
+              species="White Stork"
+              liveUrl="https://www.youtube.com/@DNA-eV/live"
+              title="DNA White Stork Nest"
+              description="Watch white storks at their nest through this DNA conservation camera. Observe these elegant birds in their natural habitat as they nest and raise their young."
+              location="Germany"
+              thumbnail="https://i.ytimg.com/vi/6IRSJR3KDUY/hqdefault.jpg"
+              videoId="6IRSJR3KDUY"
+              channelName="DNA-eV"
+            />
+
+            <BirdsHomeCam
+              id="ashgrove-peregrine"
+              number={10}
+              species="Peregrine Falcon"
+              liveUrl="https://www.youtube.com/@TheAshgroveClinic/live"
+              title="Ashgrove Peregrine Falcon Nest"
+              description="Watch peregrine falcons at their urban nest. Observe the world's fastest birds as they hunt, nest, and raise their young in a city environment."
+              location="Urban Area"
+              thumbnail="https://i.ytimg.com/vi/TmgP8BhtffE/hqdefault.jpg"
+              videoId="TmgP8BhtffE"
+              channelName="The Ashgrove Clinic"
+            />
+
+            <BirdsHomeCam
+              id="cornell-bird-cams"
+              number={11}
+              species="Various Birds"
+              liveUrl="https://www.youtube.com/@CornellBirdCams/live"
+              title="Cornell Bird Cams Live"
+              description="Watch a variety of birds at Cornell Lab of Ornithology's live bird feeders and cams. See different species visiting throughout the day in this world-renowned birding location."
+              location="Cornell Lab, New York, USA"
+              thumbnail="https://i.ytimg.com/vi/BRNsaDSzpnk/hqdefault.jpg"
+              videoId="BRNsaDSzpnk"
+              channelName="Cornell Bird Cams"
+            />
+
+            <BirdsHomeCam
+              id="great-lakes-eagle"
+              number={12}
+              species="Bald Eagle"
+              liveUrl="https://www.youtube.com/@GreatLakesBaldEagleCam/live"
+              title="Great Lakes Bald Eagle Cam"
+              description="Watch bald eagles at their nest near the Great Lakes. Observe these magnificent raptors as they nest, hunt, and raise their young in this pristine northern habitat."
+              location="Great Lakes Region, USA"
+              thumbnail="https://i.ytimg.com/vi/pUHXFVYn0-E/hqdefault.jpg"
+              videoId="pUHXFVYn0-E"
+              channelName="Great Lakes Bald Eagle Cam"
+            />
           </div>
         </div>
       </main>

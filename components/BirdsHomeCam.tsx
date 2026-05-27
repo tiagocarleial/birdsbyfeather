@@ -29,6 +29,13 @@ export default function BirdsHomeCam({
   channelName,
 }: BirdsHomeCamProps) {
   const [modalOpen, setModalOpen] = useState(false);
+  const [videoLoading, setVideoLoading] = useState(true);
+
+  // Reset loading state when modal opens
+  const handleOpenModal = () => {
+    setModalOpen(true);
+    setVideoLoading(true);
+  };
 
   // Get channel URL (remove /live from liveUrl)
   const getChannelUrl = (url: string): string => {
@@ -65,6 +72,41 @@ export default function BirdsHomeCam({
     // For FOBBVCAM
     if (liveUrl.includes('@FOBBVCAM')) {
       return 'https://www.youtube.com/embed/live_stream?channel=UCsFgbVuhRrPV5FqyN7kOD8g&autoplay=1';
+    }
+
+    // For Uist Forest Retreat
+    if (liveUrl.includes('@uistforestretreat')) {
+      return 'https://www.youtube.com/embed/live_stream?channel=UCMLIrAbhJmZEP4M32R8Ocyg&autoplay=1';
+    }
+
+    // For Explore Osprey and Falcons
+    if (liveUrl.includes('@ExploreOspreyandFalcons')) {
+      return 'https://www.youtube.com/embed/live_stream?channel=UCv0In2Sw_YabIhMHHOoTSkA&autoplay=1';
+    }
+
+    // For Stadtverwaltung Bad Salzungen (Stork)
+    if (liveUrl.includes('@StadtverwaltungBadSalzungen')) {
+      return 'https://www.youtube.com/embed/live_stream?channel=UCzAuBgdr5YC8ARNRMWgIAXg&autoplay=1';
+    }
+
+    // For DNA-eV (Stork)
+    if (liveUrl.includes('@DNA-eV')) {
+      return 'https://www.youtube.com/embed/live_stream?channel=UCTafwp7XV4wG6kL4Dp6iAJQ&autoplay=1';
+    }
+
+    // For The Ashgrove Clinic (Peregrine Falcon)
+    if (liveUrl.includes('@TheAshgroveClinic')) {
+      return 'https://www.youtube.com/embed/live_stream?channel=UCN23mw22ip82ip_XdNCkynQ&autoplay=1';
+    }
+
+    // For Cornell Bird Cams
+    if (liveUrl.includes('@CornellBirdCams')) {
+      return 'https://www.youtube.com/embed/live_stream?channel=UCZXZQxS3d6NpR-eH_gdDwYA&autoplay=1';
+    }
+
+    // For Great Lakes Bald Eagle Cam
+    if (liveUrl.includes('@GreatLakesBaldEagleCam')) {
+      return 'https://www.youtube.com/embed/live_stream?channel=UCob_chLKvtrcg8KE-KpQiig&autoplay=1';
     }
 
     // If it's already an embed URL, return as-is
@@ -109,7 +151,7 @@ export default function BirdsHomeCam({
                   </button>
                 </Link>
                 <button
-                  onClick={() => setModalOpen(true)}
+                  onClick={handleOpenModal}
                   className="flex-1 px-3 py-2 bg-green-600/90 hover:bg-green-700 text-white rounded-lg font-semibold transition-all flex items-center justify-center gap-2 text-sm backdrop-blur-sm shadow-lg shadow-green-600/30"
                 >
                   <i className="fa-solid fa-play"></i>
@@ -164,13 +206,24 @@ export default function BirdsHomeCam({
             </button>
 
             {/* Video Player */}
-            <div className="aspect-video bg-black rounded-lg overflow-hidden">
+            <div className="aspect-video bg-black rounded-lg overflow-hidden relative">
+              {/* Loading Spinner */}
+              {videoLoading && (
+                <div className="absolute inset-0 flex items-center justify-center bg-gray-900 z-10">
+                  <div className="text-center">
+                    <div className="inline-block animate-spin rounded-full h-16 w-16 border-4 border-gray-600 border-t-green-500 mb-4"></div>
+                    <p className="text-gray-400 text-sm">Loading live stream...</p>
+                  </div>
+                </div>
+              )}
+
               <iframe
                 className="w-full h-full"
                 src={getEmbedUrl()}
                 title={title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                onLoad={() => setVideoLoading(false)}
               ></iframe>
             </div>
 
