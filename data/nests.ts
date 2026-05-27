@@ -6,11 +6,13 @@ export const birdNests: BirdNest[] = [
     name: 'Big Bear Eagle Nest',
     species: 'Bald Eagle',
     location: 'Big Bear Valley, California',
+    liveUrl: 'https://www.youtube.com/@FriendsofBigBearValley/live',
     youtubeId: 'B4-L2nfGcuE',
     cameras: [
       {
         id: 'cam1',
         name: 'Cam 1',
+        liveUrl: 'https://www.youtube.com/@FriendsofBigBearValley/live',
         youtubeId: 'B4-L2nfGcuE',
       },
       {
@@ -51,6 +53,7 @@ export const birdNests: BirdNest[] = [
     name: 'Blue Tit Nest Cam',
     species: 'Blue Tit',
     location: 'Garden Bird Box',
+    channelId: 'UCCWeRUKoA_hUPDRw3wSZHKw',
     youtubeId: '_8TEuV4qaHo',
     status: 'active',
     description: 'Watch charming blue tits in their cozy nest box. Observe these colorful songbirds as they care for their young with remarkable dedication and energy.',
@@ -73,11 +76,13 @@ export const birdNests: BirdNest[] = [
     name: 'Bald Eagle Nest Live Cam',
     species: 'Bald Eagle',
     location: 'Santa Cruz Island, CA',
+    channelId: 'UCOvL8IpWKSRzGu77i_Y7uMA',
     youtubeId: 'OY4V_AppZ6s',
     cameras: [
       {
         id: 'cam1',
         name: 'Cam 1',
+        channelId: 'UCOvL8IpWKSRzGu77i_Y7uMA',
         youtubeId: 'OY4V_AppZ6s',
       },
       {
@@ -94,6 +99,7 @@ export const birdNests: BirdNest[] = [
     name: 'Bald Eagle Family Nest',
     species: 'Bald Eagle',
     location: 'Wildlife Reserve',
+    channelId: 'UCexLjK6HR3XTLZ2BNZGujkw',
     youtubeId: '2CP8QA_xKx4',
     status: 'active',
     description: 'Observe a bald eagle family in their natural environment. Watch daily activities including feeding, parenting, and the growth of eaglets.',
@@ -103,6 +109,7 @@ export const birdNests: BirdNest[] = [
     name: 'Common Kestrel Nest Cam',
     species: 'Common Kestrel',
     location: 'European Countryside',
+    channelId: 'UC3SIdixrRj03svwzQt-dL-A',
     youtubeId: 'G8lAvNqZvb4',
     thumbnail: 'https://i.ytimg.com/vi/G8lAvNqZvb4/hqdefault.jpg',
     status: 'active',
@@ -136,6 +143,7 @@ export const birdNests: BirdNest[] = [
     name: 'Osprey Nest Live Cam',
     species: 'Osprey',
     location: 'Coastal Area',
+    channelId: 'UC9kQgdFA9KZgfW9x1RJXcEQ',
     youtubeId: 'e8h5iqy8o-A',
     thumbnail: 'https://i.ytimg.com/vi/e8h5iqy8o-A/hqdefault.jpg',
     status: 'active',
@@ -259,11 +267,13 @@ export const birdNests: BirdNest[] = [
     name: 'Little Miami Conservancy Bald Eagle Nest',
     species: 'Bald Eagle',
     location: 'Little Miami Conservancy, Ohio',
+    liveUrl: 'https://www.youtube.com/@LittleMiamiConservancy/live',
     youtubeId: 'kHOdKaPsFk8',
     cameras: [
       {
         id: 'cam1',
         name: 'Cam 1',
+        liveUrl: 'https://www.youtube.com/@LittleMiamiConservancy/live',
         youtubeId: 'kHOdKaPsFk8',
       },
       {
