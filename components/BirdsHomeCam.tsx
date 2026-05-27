@@ -19,6 +19,18 @@ export default function BirdsHomeCam({
 }: BirdsHomeCamProps) {
   const [modalOpen, setModalOpen] = useState(false);
 
+  // Convert YouTube URL to embed format
+  const getEmbedUrl = (url: string): string => {
+    // Extract channel ID from @username URL
+    // For @DaleHollowEagleCamera -> channel ID is UClW_2-fZBUJbaFPR9OFlSCA
+    if (url.includes('@DaleHollowEagleCamera')) {
+      return 'https://www.youtube.com/embed/live_stream?channel=UClW_2-fZBUJbaFPR9OFlSCA';
+    }
+
+    // Fallback: return url as-is
+    return url;
+  };
+
   return (
     <>
       <div className="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden hover:border-green-600 transition-all group">
@@ -78,7 +90,7 @@ export default function BirdsHomeCam({
             <div className="aspect-video bg-black rounded-lg overflow-hidden">
               <iframe
                 className="w-full h-full"
-                src={liveUrl}
+                src={getEmbedUrl(liveUrl)}
                 title={title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
