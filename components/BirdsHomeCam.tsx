@@ -8,6 +8,7 @@ interface BirdsHomeCamProps {
   title: string;
   description: string;
   location: string;
+  thumbnail?: string;
 }
 
 export default function BirdsHomeCam({
@@ -16,15 +17,25 @@ export default function BirdsHomeCam({
   title,
   description,
   location,
+  thumbnail,
 }: BirdsHomeCamProps) {
   const [modalOpen, setModalOpen] = useState(false);
 
   // Convert YouTube URL to embed format with autoplay
   const getEmbedUrl = (url: string): string => {
-    // Extract channel ID from @username URL
-    // For @DaleHollowEagleCamera -> channel ID is UClW_2-fZBUJbaFPR9OFlSCA
+    // Extract channel ID from URL or use direct embed URL
     if (url.includes('@DaleHollowEagleCamera')) {
       return 'https://www.youtube.com/embed/live_stream?channel=UClW_2-fZBUJbaFPR9OFlSCA&autoplay=1';
+    }
+
+    // For Osprey channel
+    if (url.includes('UCdWFtpx_DaPxESyk0DmFtRg')) {
+      return 'https://www.youtube.com/embed/live_stream?channel=UCdWFtpx_DaPxESyk0DmFtRg&autoplay=1';
+    }
+
+    // If it's already an embed URL, return as-is
+    if (url.includes('/embed/')) {
+      return url;
     }
 
     // Fallback: return url as-is
@@ -34,6 +45,23 @@ export default function BirdsHomeCam({
   return (
     <>
       <div className="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden hover:border-green-600 transition-all group">
+        {/* Thumbnail */}
+        {thumbnail && (
+          <div className="relative aspect-video overflow-hidden">
+            <img
+              src={thumbnail}
+              alt={title}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute top-3 left-3">
+              <div className="bg-green-500 px-3 py-1 rounded-full flex items-center gap-2 text-white text-xs font-semibold">
+                <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                Live Now
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Header */}
         <div className="p-6 bg-gradient-to-r from-gray-800 to-gray-700">
           <div className="flex items-center gap-3 mb-2">

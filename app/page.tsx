@@ -34,14 +34,23 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Bird Camera Card */}
-          <div className="max-w-2xl mx-auto">
+          {/* Bird Camera Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <BirdsHomeCam
               species="Bald Eagle"
               liveUrl="https://www.youtube.com/@DaleHollowEagleCamera/live"
               title="Dale Hollow Eagle Nest"
               description="Watch majestic bald eagles in their natural habitat. Observe these powerful birds of prey as they nest, hunt, and raise their young."
               location="Dale Hollow, USA"
+            />
+
+            <BirdsHomeCam
+              species="Osprey"
+              liveUrl="https://www.youtube.com/embed/live_stream?channel=UCdWFtpx_DaPxESyk0DmFtRg"
+              title="Osprey Nest Live Cam"
+              description="Watch ospreys, magnificent fish-eating raptors, in their natural habitat. Observe their impressive fishing skills and parenting behaviors."
+              location="Wildlife Area"
+              thumbnail="https://i.ytimg.com/vi/1JmvBGTkxbE/hqdefault.jpg"
             />
           </div>
         </div>
