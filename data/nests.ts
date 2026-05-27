@@ -111,7 +111,7 @@ export const birdNests: BirdNest[] = [
     name: 'Common Kestrel Nest Cam',
     species: 'Common Kestrel',
     location: 'European Countryside',
-    liveUrl: 'https://www.youtube.com/@torenvalk_NL/live',
+    liveUrl: 'https://www.youtube.com/channel/UCGENkSG26zqbIvNK91L6gEg/live',
     youtubeId: 'G8lAvNqZvb4',
     thumbnail: 'https://i.ytimg.com/vi/G8lAvNqZvb4/hqdefault.jpg',
     status: 'active',
