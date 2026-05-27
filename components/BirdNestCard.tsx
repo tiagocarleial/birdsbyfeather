@@ -8,7 +8,7 @@ interface BirdNestCardProps {
   nest: BirdNest;
 }
 
-// Get embed URL - same logic as NestDetailClient
+// Get the embed URL for a video/live stream
 function getEmbedUrl(url: string | undefined): string {
   if (!url) return '';
 
@@ -205,7 +205,6 @@ export default function BirdNestCard({ nest }: BirdNestCardProps) {
             {/* Video Player */}
             <div className="aspect-video">
               <iframe
-                key={selectedCamera}
                 className="w-full h-full rounded-lg"
                 src={`${getEmbedUrl(selectedCamera)}?autoplay=1`}
                 title={nest.name}
