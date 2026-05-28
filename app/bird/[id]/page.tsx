@@ -434,6 +434,78 @@ const birdsData: Record<string, BirdData> = {
       'Fledgling flight practice and landing attempts',
     ],
   },
+  'quality-telecom-eagle': {
+    id: 'quality-telecom-eagle',
+    number: 18,
+    species: 'Bald Eagle',
+    liveUrl: 'https://www.youtube.com/@Quality-Telecommunications/live',
+    title: 'Quality Telecommunications Eagle Nest',
+    description: 'Live bald eagle nest camera brought to you by Quality Telecommunications. Watch these magnificent birds of prey in their natural habitat as they hunt, nest, and raise their young throughout the breeding season.',
+    fullDescription: 'Experience the majesty of American bald eagles through this high-quality nest camera sponsored by Quality Telecommunications. This camera provides viewers with an intimate look at one of America\'s most iconic raptors throughout their complete nesting cycle. From courtship and nest building through egg laying, incubation, hatching, and fledging, witness every moment of eagle family life. The camera\'s strategic positioning offers exceptional views of parental care, feeding behaviors, and the remarkable development of eaglets from helpless hatchlings to powerful young raptors ready for their first flight.',
+    location: 'United States',
+    thumbnail: 'https://i.ytimg.com/vi/K5OG8DnlUZA/hqdefault.jpg',
+    channelName: 'Quality Telecommunications',
+    videoId: 'K5OG8DnlUZA',
+    aboutSpecies: 'The bald eagle, America\'s national symbol, is a large bird of prey found throughout North America near large bodies of water. Adults are unmistakable with white heads and tails contrasting with dark brown bodies, though juveniles take 4-5 years to develop this iconic plumage. With wingspans reaching 6-8 feet and weights of 10-14 pounds, these powerful raptors are primarily fish-eaters but also hunt waterfowl and small mammals. Once endangered due to DDT pesticide use, bald eagles have made a remarkable recovery and were removed from the federal endangered species list in 2007.',
+    habitat: 'Bald eagles build their nests in tall trees near lakes, rivers, marshes, and coastal areas where fish are abundant. They prefer mature or old-growth trees with sturdy branches capable of supporting their massive nests, which can weigh over 2,000 pounds after years of additions. Eagles typically nest 50-125 feet high with commanding views of their territory and nearby water. Pairs often return to the same nest year after year, adding fresh material each season. They require large territories with access to both open water for fishing and secluded nesting sites.',
+    behavior: 'Bald eagles are powerful hunters and opportunistic feeders, primarily catching live fish but also scavenging carrion and stealing prey from other birds. They hunt by soaring high and diving to snatch fish from the water\'s surface with their powerful talons. Eagles mate for life and engage in spectacular aerial courtship displays including cartwheeling while locked together in flight. Both parents share nest building, incubation (35 days), and chick-rearing duties. Parents are devoted caregivers, protecting eaglets from predators and weather while providing constant meals until the young fledge at 10-14 weeks old.',
+    bestTime: 'Best viewing during breeding season (December-August, varies by region). Winter (December-February): nest building, courtship, and egg laying. Spring (March-May): incubation and hatching, with adults taking turns on the eggs. Early summer (May-July): intensive feeding period with frequent prey deliveries as eaglets grow rapidly. Late summer (July-August): branching and fledging as young eagles practice flying. Early morning (6-9 AM) and late afternoon (4-7 PM) typically show most feeding activity.',
+    whatToWatch: [
+      'Fish catches and prey deliveries to the nest',
+      'Nest maintenance and material additions',
+      'Feeding sessions with parents tearing food for eaglets',
+      'Eaglet development from fluffy down to juvenile plumage',
+      'First flight attempts and branching behavior',
+    ],
+  },
+  'etsu-eagle-cameras': {
+    id: 'etsu-eagle-cameras',
+    number: 19,
+    species: 'Bald Eagle',
+    liveUrl: 'https://www.youtube.com/@ETSUEagleCameras/live',
+    title: 'ETSU Eagle Cameras',
+    description: 'Live bald eagle nest cameras from East Tennessee State University. Watch these majestic American eagles throughout the complete nesting cycle, from courtship and nest building to fledging young eagles in the Tennessee wilderness.',
+    fullDescription: 'Witness the extraordinary lives of American bald eagles through East Tennessee State University\'s high-definition nest cameras. Located in the beautiful mountains of Tennessee, this educational camera project provides students, researchers, and nature enthusiasts worldwide with unprecedented access to eagle family life. The cameras capture every aspect of the breeding cycle with exceptional clarity, from the powerful pair\'s courtship rituals through the vulnerable early days of newly hatched eaglets to the triumphant moment when young eagles take their first flight. ETSU\'s commitment to wildlife education and conservation makes this one of the premier eagle cam experiences available.',
+    location: 'Tennessee, USA',
+    thumbnail: 'https://i.ytimg.com/vi/AE-8xq2lhcI/hqdefault.jpg',
+    channelName: 'ETSU Eagle Cameras',
+    videoId: 'AE-8xq2lhcI',
+    aboutSpecies: 'The bald eagle, America\'s national symbol since 1782, is a large bird of prey found throughout North America. Adults display the iconic white head and tail plumage contrasting with dark brown bodies, though juveniles require 4-5 years to develop this distinctive coloring. These powerful raptors measure 28-40 inches in length with impressive wingspans of 6-8 feet and can weigh 10-14 pounds, with females being significantly larger than males. Primarily fish-eaters, bald eagles also hunt waterfowl, small mammals, and scavenge carrion. Their remarkable recovery from near extinction due to DDT pesticide use represents one of conservation\'s greatest success stories.',
+    habitat: 'In Tennessee and throughout their range, bald eagles build massive nests in tall trees near large bodies of water including lakes, rivers, and reservoirs. They prefer mature hardwoods or conifers with sturdy branches capable of supporting nests that can grow to over 2,000 pounds after years of annual additions. Tennessee\'s numerous waterways and protected forests provide ideal eagle habitat. Nests are typically situated 50-125 feet high with commanding views of feeding territories. The state\'s eagle population has grown significantly since the 1980s, with breeding pairs now found in many counties across Tennessee.',
+    behavior: 'Bald eagles are formidable hunters and opportunistic feeders, primarily catching live fish but also taking waterfowl, small mammals, and scavenging carrion when available. They hunt by soaring at great heights and diving to snatch fish from the water\'s surface with powerful talons. Eagles mate for life and perform spectacular aerial courtship displays including synchronized flights and talon-grappling cartwheels. Both parents share all nesting responsibilities: building and maintaining the nest, incubating eggs for approximately 35 days, and feeding and protecting eaglets. Parents are devoted caregivers, shielding young from weather and predators while providing constant meals until fledging at 10-14 weeks old.',
+    bestTime: 'Best viewing during Tennessee breeding season (November-July). Late fall/early winter (November-January): nest building, courtship displays, and egg laying. Winter/early spring (January-March): incubation period with adults taking turns on eggs. Spring (March-May): hatching and intensive feeding period with frequent prey deliveries. Late spring/early summer (May-July): rapid eaglet growth, branching behavior, and fledging. Early morning (6-9 AM) and late afternoon (4-7 PM) typically show peak feeding activity.',
+    whatToWatch: [
+      'Fish catches and dramatic prey deliveries',
+      'Nest construction and maintenance behaviors',
+      'Incubation shifts between devoted parents',
+      'Feeding sessions with parents tearing food for growing eaglets',
+      'Branching and first flight attempts',
+    ],
+  },
+  'superbeaks-osprey': {
+    id: 'superbeaks-osprey',
+    number: 20,
+    species: 'Osprey',
+    liveUrl: 'https://www.youtube.com/@SuperBeaks/live',
+    title: 'SuperBeaks Osprey Nest',
+    description: 'Watch ospreys live at their nest through SuperBeaks\' wildlife camera. Observe these skilled fish-hunting raptors as they raise their young, deliver fresh-caught fish, and demonstrate remarkable hunting abilities throughout the breeding season.',
+    fullDescription: 'Experience the fascinating world of ospreys through SuperBeaks\' high-quality nest camera. This dedicated wildlife camera provides viewers with intimate access to one of nature\'s most skilled fishermen throughout the complete breeding cycle. Watch as parent ospreys demonstrate their incredible fishing prowess, diving feet-first into water to catch fish with remarkable precision. The camera captures tender family moments as adults care for their young, from tiny downy chicks to fully-grown fledglings ready for their first flight. SuperBeaks\' commitment to wildlife education brings the wonder of osprey family life directly to screens worldwide.',
+    location: 'United States',
+    thumbnail: 'https://i.ytimg.com/vi/8AtRJpORh5A/hqdefault.jpg',
+    channelName: 'SuperBeaks',
+    videoId: '8AtRJpORh5A',
+    aboutSpecies: 'Ospreys, also known as sea hawks or fish hawks, are large raptors found on every continent except Antarctica. These distinctive birds measure 21-23 inches in length with impressive 5-6 foot wingspans. Adults have brown upperparts, white underparts, and distinctive dark eye stripes on white heads. Unlike most raptors, ospreys are almost exclusively fish-eaters, possessing unique adaptations including reversible outer toes, barbed footpads, and closable nostrils for diving. Their populations have recovered remarkably since DDT bans, making them a conservation success story.',
+    habitat: 'Ospreys nest near lakes, rivers, coastal areas, and marshes where fish are plentiful. They build large stick nests on dead trees, utility poles, channel markers, and specially erected platforms. Nests are often reused and expanded annually, sometimes growing to 6 feet deep and weighing hundreds of pounds. Ospreys require clear, shallow waters for fishing, typically hunting in waters less than 100 feet deep. These adaptable raptors have successfully colonized urban and suburban waterways, thriving alongside human development when nest sites and clean waters are available.',
+    behavior: 'Ospreys are spectacular hunters, hovering 30-100 feet above water before plunging feet-first to catch fish with sharp, curved talons. They can dive completely underwater and carry fish weighing up to 4 pounds, always positioning prey head-forward for aerodynamic flight. Ospreys mate for life and perform aerial courtship displays including spectacular sky-dances with fish presentations. Both parents build nests and care for young, though females do most incubation (38-42 days) while males provide food. Parents feed chicks torn fish pieces until fledging at 7-8 weeks old. Young ospreys learn to fish independently through trial and error.',
+    bestTime: 'Best viewing during breeding season (March-September, varies by region). Spring (March-May): nest building, courtship displays, egg laying, and incubation. Late spring/early summer (May-July): hatching and intensive feeding period with frequent dramatic fish deliveries. Summer (June-August): rapid chick growth, with parents making multiple fishing trips daily. Late summer (August-September): fledging period with young birds practicing flight and early fishing attempts. Early morning (6-10 AM) and late afternoon (3-7 PM) show peak fishing activity.',
+    whatToWatch: [
+      'Spectacular fishing dives and catches',
+      'Fish deliveries with prey carried head-forward',
+      'Nest building and maintenance with stick additions',
+      'Chick feeding with parents tearing fish into pieces',
+      'Fledgling flight practice and first fishing attempts',
+    ],
+  },
 };
 
 // Get embed URL
@@ -504,6 +576,18 @@ function getEmbedUrl(liveUrl: string, videoId?: string): string {
 
   if (liveUrl.includes('@fauconcrecerelle')) {
     return 'https://www.youtube.com/embed/live_stream?channel=UCGjtF72qHEOkEn-9PLf1t7g&autoplay=1';
+  }
+
+  if (liveUrl.includes('@Quality-Telecommunications')) {
+    return 'https://www.youtube.com/embed/live_stream?channel=UCue8p2CbQu3A_FBBLndUGBw&autoplay=1';
+  }
+
+  if (liveUrl.includes('@ETSUEagleCameras')) {
+    return 'https://www.youtube.com/embed/live_stream?channel=UCo__Dkujb2A9HMfmkyqbsMQ&autoplay=1';
+  }
+
+  if (liveUrl.includes('@SuperBeaks')) {
+    return 'https://www.youtube.com/embed/live_stream?channel=UC1C9wcqMqP7QOmYLSqDJRLw&autoplay=1';
   }
 
   return liveUrl;

@@ -212,6 +212,42 @@ export default function HomePage() {
       thumbnail: "https://i.ytimg.com/vi/TmgP8BhtffE/hqdefault.jpg",
       videoId: "DSQxEryTLw8",
       channelName: "Faucon Crécerelle"
+    },
+    {
+      id: "quality-telecom-eagle",
+      number: 18,
+      species: "Bald Eagle",
+      liveUrl: "https://www.youtube.com/@Quality-Telecommunications/live",
+      title: "Quality Telecommunications Eagle Nest",
+      description: "Live bald eagle nest camera brought to you by Quality Telecommunications. Watch these magnificent birds of prey in their natural habitat as they hunt, nest, and raise their young throughout the breeding season.",
+      location: "United States",
+      thumbnail: "https://i.ytimg.com/vi/K5OG8DnlUZA/hqdefault.jpg",
+      videoId: "K5OG8DnlUZA",
+      channelName: "Quality Telecommunications"
+    },
+    {
+      id: "etsu-eagle-cameras",
+      number: 19,
+      species: "Bald Eagle",
+      liveUrl: "https://www.youtube.com/@ETSUEagleCameras/live",
+      title: "ETSU Eagle Cameras",
+      description: "Live bald eagle nest cameras from East Tennessee State University. Watch these majestic American eagles throughout the complete nesting cycle, from courtship and nest building to fledging young eagles in the Tennessee wilderness.",
+      location: "Tennessee, USA",
+      thumbnail: "https://i.ytimg.com/vi/AE-8xq2lhcI/hqdefault.jpg",
+      videoId: "AE-8xq2lhcI",
+      channelName: "ETSU Eagle Cameras"
+    },
+    {
+      id: "superbeaks-osprey",
+      number: 20,
+      species: "Osprey",
+      liveUrl: "https://www.youtube.com/@SuperBeaks/live",
+      title: "SuperBeaks Osprey Nest",
+      description: "Watch ospreys live at their nest through SuperBeaks' wildlife camera. Observe these skilled fish-hunting raptors as they raise their young, deliver fresh-caught fish, and demonstrate remarkable hunting abilities throughout the breeding season.",
+      location: "United States",
+      thumbnail: "https://i.ytimg.com/vi/8AtRJpORh5A/hqdefault.jpg",
+      videoId: "8AtRJpORh5A",
+      channelName: "SuperBeaks"
     }
   ];
 
@@ -242,6 +278,10 @@ export default function HomePage() {
               <Link href="/" className="text-gray-400 hover:text-white transition-colors font-medium flex items-center gap-2">
                 <i className="fa-solid fa-home"></i>
                 Home
+              </Link>
+              <Link href="/best-moments" className="text-gray-400 hover:text-white transition-colors font-medium flex items-center gap-2">
+                <i className="fa-solid fa-star"></i>
+                Best Moments
               </Link>
               <Link href="/#nests" className="text-gray-400 hover:text-white transition-colors font-medium flex items-center gap-2">
                 <i className="fa-solid fa-video"></i>

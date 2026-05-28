@@ -130,6 +130,21 @@ export default function BirdsHomeCam({
       return 'https://www.youtube.com/embed/live_stream?channel=UCGjtF72qHEOkEn-9PLf1t7g&autoplay=1';
     }
 
+    // For Quality Telecommunications (Bald Eagle)
+    if (liveUrl.includes('@Quality-Telecommunications')) {
+      return 'https://www.youtube.com/embed/live_stream?channel=UCue8p2CbQu3A_FBBLndUGBw&autoplay=1';
+    }
+
+    // For ETSU Eagle Cameras (Bald Eagle)
+    if (liveUrl.includes('@ETSUEagleCameras')) {
+      return 'https://www.youtube.com/embed/live_stream?channel=UCo__Dkujb2A9HMfmkyqbsMQ&autoplay=1';
+    }
+
+    // For SuperBeaks (Osprey)
+    if (liveUrl.includes('@SuperBeaks')) {
+      return 'https://www.youtube.com/embed/live_stream?channel=UC1C9wcqMqP7QOmYLSqDJRLw&autoplay=1';
+    }
+
     // If it's already an embed URL, return as-is
     if (liveUrl.includes('/embed/')) {
       return liveUrl;

@@ -12,6 +12,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
+      url: `${baseUrl}/best-moments`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/about`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
@@ -50,6 +56,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'kotkaklubi-various',
     'explore-penguins-puffins',
     'faucon-crecerelle',
+    'quality-telecom-eagle',
+    'etsu-eagle-cameras',
+    'superbeaks-osprey',
   ];
 
   const birdPages = birdIds.map((id) => ({
