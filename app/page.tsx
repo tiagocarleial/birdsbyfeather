@@ -197,7 +197,7 @@ export default function HomePage() {
       title: "Explore Penguins and Puffins",
       description: "Watch penguins and puffins through Explore.org's live camera network. Observe these charming seabirds in their natural habitats, featuring both Antarctic penguins and Atlantic puffins from various locations around the world.",
       location: "Multiple Locations",
-      thumbnail: "https://i.ytimg.com/vi/sWQtnUoBy1w/hqdefault.jpg",
+      thumbnail: "https://i.ytimg.com/vi/Ziu0WsWAukE/hqdefault.jpg?v=69f92079&sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAfGbaiT7NhyXTT2xQqGkXlYOdV5w",
       videoId: "F5yLGZp5nsA",
       channelName: "Explore Penguins and Puffins"
     },

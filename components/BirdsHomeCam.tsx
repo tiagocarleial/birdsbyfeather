@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import AmazonModalBanner from './AmazonModalBanner';
 
 interface BirdsHomeCamProps {
   id: string; // Unique ID for the bird cam
@@ -214,19 +215,28 @@ export default function BirdsHomeCam({
           onClick={() => setModalOpen(false)}
         >
           <div
-            className="relative w-full max-w-6xl"
+            className="relative w-full max-w-7xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               onClick={() => setModalOpen(false)}
-              className="absolute -top-12 right-0 text-white hover:text-red-500 transition-colors"
+              className="absolute -top-12 right-0 text-white hover:text-red-500 transition-colors z-10"
             >
               <i className="fa-solid fa-times text-3xl"></i>
             </button>
 
-            {/* Video Player */}
-            <div className="aspect-video bg-black rounded-lg overflow-hidden relative">
+            {/* Grid Layout: Banner + Video */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+              {/* Left Side - Amazon Banner (Vertical) */}
+              <div className="hidden md:block md:col-span-3">
+                <AmazonModalBanner />
+              </div>
+
+              {/* Right Side - Video Player */}
+              <div className="md:col-span-9">
+                {/* Video Player */}
+                <div className="aspect-video bg-black rounded-lg overflow-hidden relative">
               {/* Loading Spinner */}
               {videoLoading && (
                 <div className="absolute inset-0 flex items-center justify-center bg-gray-900 z-10">
@@ -245,45 +255,47 @@ export default function BirdsHomeCam({
                 allowFullScreen
                 onLoad={() => setVideoLoading(false)}
               ></iframe>
-            </div>
-
-            {/* Info Bar */}
-            <div className="mt-4 space-y-3">
-              <div className="flex items-center justify-between text-sm">
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-green-400 font-semibold">Live Stream</span>
                 </div>
-                <a
-                  href={liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
-                >
-                  <i className="fa-brands fa-youtube"></i>
-                  Watch on YouTube
-                </a>
-              </div>
 
-              {/* Attribution Notice */}
-              <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0">
-                    <i className="fa-brands fa-youtube text-red-500 text-2xl"></i>
+                {/* Info Bar */}
+                <div className="mt-4 space-y-3">
+                  <div className="flex items-center justify-between text-sm">
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                      <span className="text-green-400 font-semibold">Live Stream</span>
+                    </div>
+                    <a
+                      href={liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
+                    >
+                      <i className="fa-brands fa-youtube"></i>
+                      Watch on YouTube
+                    </a>
                   </div>
-                  <div className="flex-1">
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      <span className="font-semibold text-white">Conteúdo Original:</span> Esta transmissão ao vivo pertence e é operada pelo canal{' '}
-                      <a
-                        href={getChannelUrl(liveUrl)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-green-400 hover:text-green-300 font-semibold underline"
-                      >
-                        {channelName}
-                      </a>
-                      {' '}no YouTube. Não estamos copiando ou redistribuindo o conteúdo - apenas exibindo a transmissão pública original diretamente da fonte.
-                    </p>
+
+                  {/* Attribution Notice */}
+                  <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0">
+                        <i className="fa-brands fa-youtube text-red-500 text-2xl"></i>
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-gray-300 text-sm leading-relaxed">
+                          <span className="font-semibold text-white">Conteúdo Original:</span> Esta transmissão ao vivo pertence e é operada pelo canal{' '}
+                          <a
+                            href={getChannelUrl(liveUrl)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-green-400 hover:text-green-300 font-semibold underline"
+                          >
+                            {channelName}
+                          </a>
+                          {' '}no YouTube. Não estamos copiando ou redistribuindo o conteúdo - apenas exibindo a transmissão pública original diretamente da fonte.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

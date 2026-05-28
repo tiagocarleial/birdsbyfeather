@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useMemo } from 'react';
-import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import AmazonModalBanner from './AmazonModalBanner';
 
 interface Product {
   name: string;
@@ -31,6 +31,14 @@ interface AmazonAffiliateBannerProps {
  */
 export default function AmazonAffiliateBanner({ product: customProduct }: AmazonAffiliateBannerProps) {
   const [isHovered, setIsHovered] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [videoLoading, setVideoLoading] = useState(true);
+
+  // Reset loading state when modal opens
+  const handleOpenModal = () => {
+    setModalOpen(true);
+    setVideoLoading(true);
+  };
 
   // Featured bird cards pool
   const featuredBirds: FeaturedBirdCard[] = [
@@ -78,10 +86,13 @@ export default function AmazonAffiliateBanner({ product: customProduct }: Amazon
     },
   ];
 
-  // Randomize featured bird on component mount (stable across re-renders)
-  const randomBird = useMemo(() => {
+  // Randomize featured bird on component mount (client-side only to avoid hydration mismatch)
+  const [randomBird, setRandomBird] = useState(featuredBirds[0]); // Default to first bird for SSR
+
+  useEffect(() => {
+    // Set random bird only on client side after hydration
     const randomIndex = Math.floor(Math.random() * featuredBirds.length);
-    return featuredBirds[randomIndex];
+    setRandomBird(featuredBirds[randomIndex]);
   }, []);
 
   // Default product (Bald Eagle Plushie Set)
@@ -105,7 +116,7 @@ export default function AmazonAffiliateBanner({ product: customProduct }: Amazon
           <div className="grid md:grid-cols-12 gap-4">
             {/* Left Side - Featured Bird Cam Card */}
             <div className="md:col-span-4">
-              <Link href={`/bird/${randomBird.id}`}>
+              <div onClick={handleOpenModal} className="cursor-pointer">
                 <div className="bg-gray-800 border-2 border-green-500/30 rounded-xl overflow-hidden hover:border-green-500/60 transition-all duration-300 h-full">
                   {/* Featured Badge */}
                   <div className="bg-gradient-to-r from-green-600 to-emerald-600 px-3 py-2 text-center">
@@ -140,7 +151,7 @@ export default function AmazonAffiliateBanner({ product: customProduct }: Amazon
                     </div>
                   </div>
                 </div>
-              </Link>
+              </div>
             </div>
 
             {/* Right Side - Amazon Banner */}
@@ -271,6 +282,93 @@ export default function AmazonAffiliateBanner({ product: customProduct }: Amazon
           </div>
         </div>
       </div>
+
+      {/* Modal for Featured Bird */}
+      {modalOpen && (
+        <div
+          className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          onClick={() => setModalOpen(false)}
+        >
+          <div
+            className="relative w-full max-w-7xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setModalOpen(false)}
+              className="absolute -top-12 right-0 text-white hover:text-red-500 transition-colors z-10"
+            >
+              <i className="fa-solid fa-times text-3xl"></i>
+            </button>
+
+            {/* Grid Layout: Banner + Video */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+              {/* Left Side - Amazon Banner (Vertical) */}
+              <div className="hidden md:block md:col-span-3">
+                <AmazonModalBanner />
+              </div>
+
+              {/* Right Side - Video Player */}
+              <div className="md:col-span-9">
+                {/* Video Player */}
+                <div className="aspect-video bg-black rounded-lg overflow-hidden relative">
+                  {/* Loading Spinner */}
+                  {videoLoading && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-gray-900 z-10">
+                      <div className="text-center">
+                        <div className="inline-block animate-spin rounded-full h-16 w-16 border-4 border-gray-600 border-t-green-500 mb-4"></div>
+                        <p className="text-gray-400 text-sm">Loading live stream...</p>
+                      </div>
+                    </div>
+                  )}
+
+                  <iframe
+                    className="w-full h-full"
+                    src={`https://www.youtube.com/embed/${randomBird.videoId}?autoplay=1`}
+                    title={randomBird.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    onLoad={() => setVideoLoading(false)}
+                  ></iframe>
+                </div>
+
+                {/* Info Bar */}
+                <div className="mt-4 space-y-3">
+                  <div className="flex items-center justify-between text-sm">
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                      <span className="text-green-400 font-semibold">Live Stream</span>
+                    </div>
+                    <a
+                      href={`https://www.youtube.com/watch?v=${randomBird.videoId}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
+                    >
+                      <i className="fa-brands fa-youtube"></i>
+                      Watch on YouTube
+                    </a>
+                  </div>
+
+                  {/* Attribution Notice */}
+                  <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0">
+                        <i className="fa-brands fa-youtube text-red-500 text-2xl"></i>
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-gray-300 text-sm leading-relaxed">
+                          <span className="font-semibold text-white">Conteúdo Original:</span> Esta transmissão ao vivo pertence e é operada pelo respectivo canal no YouTube. Não estamos copiando ou redistribuindo o conteúdo - apenas exibindo a transmissão pública original diretamente da fonte.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
