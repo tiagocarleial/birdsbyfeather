@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import BirdsHomeCam from '@/components/BirdsHomeCam';
 import FilterBar from '@/components/FilterBar';
+import AmazonAffiliateBanner from '@/components/AmazonAffiliateBanner';
 
 export default function HomePage() {
   const [selectedSpecies, setSelectedSpecies] = useState('all');
@@ -294,7 +295,15 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+        </div>
+      </main>
 
+      {/* Amazon Affiliate Banner */}
+      <AmazonAffiliateBanner />
+
+      {/* Continue with Nests Section */}
+      <main className="container mx-auto px-4 pb-12">
+        <div className="max-w-7xl mx-auto">
           {/* Filter Bar */}
           <FilterBar
             species={uniqueSpecies}

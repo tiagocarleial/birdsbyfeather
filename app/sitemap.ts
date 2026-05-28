@@ -1,5 +1,4 @@
 import { MetadataRoute } from 'next';
-import { birdNests } from '@/data/nests';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://birdsbyfeather.com';
@@ -11,12 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'daily' as const,
       priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/nests`,
-      lastModified: new Date(),
-      changeFrequency: 'daily' as const,
-      priority: 0.9,
     },
     {
       url: `${baseUrl}/about`,
@@ -38,13 +31,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Dynamic nest pages
-  const nestPages = birdNests.map((nest) => ({
-    url: `${baseUrl}/nest/${nest.id}`,
+  // Bird nest detail pages
+  const birdIds = [
+    'dale-hollow-eagle',
+    'osprey-carnyx',
+    'garden-birds-nest',
+    'forestry-england-osprey',
+    'fobb-bald-eagle',
+    'uist-white-tailed-eagle',
+    'explore-osprey',
+    'bad-salzungen-stork',
+    'dna-stork',
+    'ashgrove-peregrine',
+    'cornell-bird-cams',
+    'great-lakes-eagle',
+    'rspb-multi-camera',
+    'kotkaklubi-stork',
+    'kotkaklubi-various',
+    'explore-penguins-puffins',
+    'faucon-crecerelle',
+  ];
+
+  const birdPages = birdIds.map((id) => ({
+    url: `${baseUrl}/bird/${id}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }));
 
-  return [...staticPages, ...nestPages];
+  return [...staticPages, ...birdPages];
 }
