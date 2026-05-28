@@ -314,6 +314,126 @@ const birdsData: Record<string, BirdData> = {
       'Flight training and first fishing attempts',
     ],
   },
+  'rspb-multi-camera': {
+    id: 'rspb-multi-camera',
+    number: 13,
+    species: 'Multi-Camera',
+    liveUrl: 'https://www.youtube.com/RSPBvideo/live',
+    title: 'RSPB Multi-Camera Feed',
+    description: 'Watch multiple bird species from RSPB\'s live camera network. Features swift, osprey, goshawk, and goldeneye nests. Switch between different nest cameras to observe various birds in their natural habitats.',
+    fullDescription: 'Experience the incredible diversity of British bird life through the Royal Society for the Protection of Birds (RSPB) multi-camera network. RSPB is the UK\'s largest nature conservation charity, dedicated to protecting birds and their habitats. This live stream features multiple nest cameras showcasing different species including swifts, ospreys, goshawks, and goldeneyes. Each camera provides unique insights into the breeding behaviors and conservation efforts for these remarkable birds across various UK locations.',
+    location: 'United Kingdom',
+    thumbnail: 'https://i.ytimg.com/vi/3VVoYO-ZFPE/hqdefault.jpg',
+    channelName: 'RSPBvideo',
+    videoId: undefined,
+    aboutSpecies: 'This multi-camera feed showcases several British bird species. Swifts are aerial specialists that spend most of their lives in flight. Ospreys are magnificent fish-eating raptors that migrate from Africa. Goshawks are powerful forest hawks that hunt birds and mammals. Goldeneyes are diving ducks that nest in tree cavities. Each species represents different conservation challenges and success stories in the UK.',
+    habitat: 'The cameras cover diverse habitats across the UK. Swift cameras monitor urban nesting sites under eaves. Osprey cameras overlook large Scottish lochs and reservoirs. Goshawk cameras are positioned in dense forest areas. Goldeneye cameras monitor woodland lakes with mature trees. Each location is carefully managed by RSPB to provide optimal breeding conditions.',
+    behavior: 'Each species exhibits unique behaviors. Swifts perform spectacular aerial displays and feed exclusively on flying insects. Ospreys demonstrate incredible fishing skills, plunging into water to catch fish. Goshawks are stealthy hunters, navigating through dense forest to catch prey. Goldeneyes dive underwater to feed on aquatic invertebrates and nest in tree holes. All species show devoted parental care during breeding season.',
+    bestTime: 'Best viewing varies by species. Swifts (May-August): breeding season with constant aerial activity. Ospreys (April-August): migration arrival, nesting, and chick rearing. Goshawks (March-July): courtship, nesting, and fledging. Goldeneyes (April-July): nesting and brood rearing. Each camera offers different peak viewing times throughout spring and summer.',
+    whatToWatch: [
+      'Swift aerial acrobatics and nest visits',
+      'Osprey fishing dives and prey deliveries',
+      'Goshawk hunting and chick feeding',
+      'Goldeneye diving and duckling development',
+      'Multiple species breeding behaviors',
+    ],
+  },
+  'kotkaklubi-stork': {
+    id: 'kotkaklubi-stork',
+    number: 14,
+    species: 'White Stork',
+    liveUrl: 'https://www.youtube.com/@Kotkaklubi/live',
+    title: 'Kotkaklubi White Stork Nest',
+    description: 'Watch white storks at their nest in Estonia. Kotkaklubi (Eagle Club) has been running live cameras on protected bird species nests since 2007, providing a unique window into the lives of these magnificent birds.',
+    fullDescription: 'Experience the majesty of white storks through this live camera operated by Kotkaklubi, Estonia\'s premier bird conservation organization. Since 2007, Kotkaklubi (Eagle Club) has pioneered live nest cameras to monitor and protect endangered bird species including white storks, eagles, and black storks. This camera provides an intimate view into stork family life in the Estonian countryside, where these elegant birds have nested for centuries. Watch as these symbols of good fortune perform their traditional bill-clattering displays and raise their young.',
+    location: 'Estonia',
+    thumbnail: 'https://i.ytimg.com/vi/ldThVtNVYJQ/hqdefault.jpg',
+    channelName: 'Kotkaklubi',
+    videoId: undefined,
+    aboutSpecies: 'White storks are large, elegant wading birds standing over 3 feet tall with a wingspan of 6-7 feet. They are instantly recognizable with their white plumage, black wing feathers, long red legs, and pointed red bills. These iconic birds are deeply embedded in European folklore and are symbols of good luck, fertility, and new beginnings. Estonia hosts important breeding populations of white storks, with Kotkaklubi monitoring and protecting numerous nest sites.',
+    habitat: 'In Estonia, white storks traditionally nest on rooftops, chimneys, telephone poles, and specially erected platforms in rural areas. They feed in wet meadows, shallow wetlands, agricultural fields, and grasslands. Estonian stork populations benefit from the country\'s extensive wetland systems and traditional farming practices that provide abundant prey including frogs, insects, small rodents, and fish. Kotkaklubi works to preserve and enhance these critical habitats.',
+    behavior: 'White storks are skilled hunters, stalking through grass and shallow water to catch prey with quick bill strikes. They are famous for their spectacular bill-clattering greeting ceremonies, performed when mates reunite at the nest. Both parents share all nesting duties including incubation (33-34 days) and feeding. Estonian storks are long-distance migrants, flying to sub-Saharan Africa each autumn and returning in spring, covering over 6,000 miles. Kotkaklubi\'s cameras document the complete breeding cycle and migration patterns.',
+    bestTime: 'Best viewing during Estonian breeding season (April-August). Spring (late April-May): dramatic arrival from Africa, nest renovation, and courtship displays. Late spring (May-June): egg laying and incubation. Summer (June-July): chick rearing with frequent feeding. Late summer (August): fledging and pre-migration gathering. Early morning (6-9 AM) shows peak feeding activity.',
+    whatToWatch: [
+      'Bill-clattering greeting displays',
+      'Nest building with sticks and grass',
+      'Parents feeding chicks regurgitated food',
+      'Chick development from small downy to full-sized',
+      'Migration preparation behaviors',
+    ],
+  },
+  'kotkaklubi-various': {
+    id: 'kotkaklubi-various',
+    number: 15,
+    species: 'Various Birds',
+    liveUrl: 'https://www.youtube.com/@Kotkaklubi/live',
+    title: 'Kotkaklubi Multi-Species Cameras',
+    description: 'Watch multiple bird species from Kotkaklubi\'s camera network in Estonia. Features live cameras on eagles (white-tailed, spotted, golden), ospreys, and storks. Experience diverse Estonian wildlife from one premier conservation organization.',
+    fullDescription: 'Explore the remarkable diversity of Estonian birds of prey and storks through Kotkaklubi\'s comprehensive camera network. Since 2007, this pioneering conservation organization has installed cameras on nests of rare and protected species across Estonia. The multi-species feed rotates between white-tailed eagles, lesser spotted eagles, greater spotted eagles, golden eagles, ospreys, white storks, and black storks. Each camera provides crucial data for conservation while allowing viewers worldwide to witness these magnificent birds in their natural habitats.',
+    location: 'Estonia',
+    thumbnail: 'https://i.ytimg.com/vi/7uUmdtXSgwU/hqdefault.jpg',
+    channelName: 'Kotkaklubi',
+    videoId: undefined,
+    aboutSpecies: 'This network features Estonia\'s most impressive birds. White-tailed eagles are Europe\'s largest raptors with 8-foot wingspans. Lesser and greater spotted eagles are endangered forest raptors. Golden eagles are powerful mountain predators. Ospreys are specialist fish hunters. White and black storks are iconic wading birds. Estonia provides crucial breeding habitat for all these species, making Kotkaklubi\'s conservation work internationally significant.',
+    habitat: 'The cameras span diverse Estonian ecosystems. Eagle cameras overlook forests, lakes, and coastal areas. Osprey cameras monitor fish-rich lakes and rivers. Stork cameras are positioned in wetlands and rural villages. Estonia\'s extensive forests, clean waterways, and low human density create ideal conditions for these sensitive species. Kotkaklubi works to protect and manage these critical habitats.',
+    behavior: 'Each species shows unique behaviors. Eagles demonstrate powerful hunting and impressive aerial displays. Ospreys perform spectacular fishing dives. Storks execute bill-clattering ceremonies and long-distance migrations. All species show devoted parental care, with both parents typically sharing nesting duties. The cameras capture courtship, hunting, feeding, chick development, and fledging across multiple species.',
+    bestTime: 'Viewing opportunities vary by species. Eagles (February-July): early nesters with long breeding seasons. Ospreys (April-August): return from Africa migration through fledging. Storks (April-August): arrival, nesting, and Africa migration preparation. Different cameras show peak activity at different times, providing year-round viewing opportunities. Early morning and late afternoon typically show most activity.',
+    whatToWatch: [
+      'Multiple eagle species hunting and nesting',
+      'Osprey fishing techniques and prey deliveries',
+      'Stork bill-clattering and feeding behaviors',
+      'Diverse chick development across species',
+      'Conservation efforts protecting rare birds',
+    ],
+  },
+  'explore-penguins-puffins': {
+    id: 'explore-penguins-puffins',
+    number: 16,
+    species: 'Various Birds',
+    liveUrl: 'https://www.youtube.com/@ExplorePenguinsandPuffins/live',
+    title: 'Explore Penguins and Puffins',
+    description: 'Watch penguins and puffins through Explore.org\'s live camera network. Observe these charming seabirds in their natural habitats, featuring both Antarctic penguins and Atlantic puffins from various locations around the world.',
+    fullDescription: 'Experience the enchanting world of seabirds through Explore.org\'s penguin and puffin camera network. Explore.org is the world\'s leading philanthropic live nature cam network, bringing wildlife into homes and classrooms globally. This multi-camera feed showcases charismatic seabirds from different locations: Magellanic penguins at rescue facilities, Atlantic puffins on Maine islands, and various other seabird colonies. Each camera provides educational content about seabird conservation, marine ecosystems, and the challenges these birds face.',
+    location: 'Multiple Locations',
+    thumbnail: 'https://i.ytimg.com/vi/sWQtnUoBy1w/hqdefault.jpg',
+    channelName: 'Explore Penguins and Puffins',
+    videoId: undefined,
+    aboutSpecies: 'This feed features diverse seabirds. Penguins are flightless birds specialized for swimming, with species ranging from Antarctic to temperate regions. Atlantic puffins are colorful diving seabirds known as "sea parrots" with distinctive bills. Both groups are excellent swimmers, feeding on fish and marine invertebrates. These charismatic birds face conservation challenges from climate change, overfishing, and ocean pollution.',
+    habitat: 'Cameras monitor different seabird habitats. Penguin cameras show coastal colonies and rehabilitation centers where rescued birds recover. Puffin cameras overlook rocky Atlantic islands where these birds nest in burrows and rock crevices. Maine\'s islands provide crucial breeding habitat for Atlantic puffins, which nest in colonies and feed in surrounding waters. Conservation efforts focus on protecting these fragile island ecosystems.',
+    behavior: 'Penguins and puffins share similar lifestyles despite being unrelated. Both are skilled swimmers using wings to "fly" underwater. Penguins are more aquatic, while puffins can fly in air. Both species are colonial nesters with devoted pair bonds. Parents share incubation and chick-rearing duties. Puffins are famous for carrying multiple fish crosswise in their bills. Both groups face predators including gulls, skuas, and marine mammals.',
+    bestTime: 'Best viewing varies by location and species. Puffins (April-August): breeding season on Maine islands with frequent burrow visits and fish deliveries. Penguins (year-round): activity varies by species and location, with rehabilitation cameras showing daily life. Summer months (June-August) typically show highest activity across most cameras. Morning and evening show peak feeding times.',
+    whatToWatch: [
+      'Puffin fish deliveries with multiple catches',
+      'Penguin swimming and diving behaviors',
+      'Chick feeding and development',
+      'Colonial nesting behaviors and interactions',
+      'Conservation and rehabilitation efforts',
+    ],
+  },
+  'faucon-crecerelle': {
+    id: 'faucon-crecerelle',
+    number: 17,
+    species: 'Peregrine Falcon',
+    liveUrl: 'https://www.youtube.com/@fauconcrecerelle/live',
+    title: 'Faucon Crécerelle Nest Cam',
+    description: 'Watch peregrine falcons at their nest through this French wildlife camera. Observe these incredible aerial hunters as they hunt, nest, and raise their young with stunning detail and expert monitoring.',
+    fullDescription: 'Experience the world of peregrine falcons through this expertly positioned nest camera from France. This camera provides exceptional views of one of nature\'s most spectacular predators in their European habitat. Watch these magnificent raptors demonstrate their legendary hunting prowess, reaching speeds over 240 mph during hunting dives. The camera captures intimate family moments from courtship through fledging, offering viewers a rare glimpse into the private lives of these remarkable birds.',
+    location: 'France',
+    thumbnail: 'https://i.ytimg.com/vi/TmgP8BhtffE/hqdefault.jpg',
+    channelName: 'Faucon Crécerelle',
+    videoId: undefined,
+    aboutSpecies: 'Peregrine falcons are medium-sized raptors renowned as the fastest animals on Earth, capable of reaching speeds exceeding 240 mph during hunting dives. They measure 14-19 inches in length with a wingspan of 3.3-3.6 feet. Adults feature striking slate-blue backs, barred white underparts, and distinctive black "mustache" markings on their faces. In France and across Europe, peregrines have made a remarkable recovery from near extinction in the 1960s due to DDT pesticides, becoming one of conservation\'s greatest success stories.',
+    habitat: 'In France, peregrine falcons nest on cliff faces, rocky outcrops, quarries, and increasingly on tall buildings and bridges in urban areas. European peregrines prefer areas with open hunting grounds including coastlines, river valleys, and agricultural lands where prey birds are abundant. French populations benefit from the country\'s diverse landscapes, from Alpine cliffs to Atlantic coastal regions. Conservation efforts have protected key nesting sites and helped populations recover across Europe.',
+    behavior: 'Peregrine falcons are spectacular aerial hunters, catching birds in mid-flight after breathtaking high-speed stoops (hunting dives). They spot prey from great heights, fold their wings into a streamlined bullet shape, and plummet at incredible speeds, striking prey with their talons. European peregrines primarily hunt pigeons, doves, starlings, and other medium-sized birds. Pairs mate for life and are fiercely territorial. Both parents share incubation duties (29-32 days) and chick-rearing responsibilities. French peregrines typically raise 2-4 young per year.',
+    bestTime: 'Best viewing during European breeding season (March-July). Early spring (March-April): spectacular courtship displays including aerial acrobatics, talon-grappling, and food transfers between mates. Late spring (April-May): egg laying and intensive incubation period. Early summer (May-June): hatching and frequent feeding sessions with prey deliveries. Late summer (June-July): fledging period with young birds learning to fly and hunt. Morning hours (6-10 AM) typically show most hunting activity.',
+    whatToWatch: [
+      'Spectacular high-speed hunting stoops',
+      'Prey deliveries and feeding sessions',
+      'Courtship aerial displays and bonding',
+      'Chick development from downy white to sleek juveniles',
+      'Fledgling flight practice and landing attempts',
+    ],
+  },
 };
 
 // Get embed URL
@@ -368,6 +488,22 @@ function getEmbedUrl(liveUrl: string, videoId?: string): string {
 
   if (liveUrl.includes('@GreatLakesBaldEagleCam')) {
     return 'https://www.youtube.com/embed/live_stream?channel=UCob_chLKvtrcg8KE-KpQiig&autoplay=1';
+  }
+
+  if (liveUrl.includes('RSPBvideo')) {
+    return 'https://www.youtube.com/embed/live_stream?channel=UCl8QdQ9ZaBT65tF1yOmbMBQ&autoplay=1';
+  }
+
+  if (liveUrl.includes('@Kotkaklubi')) {
+    return 'https://www.youtube.com/embed/live_stream?channel=UCCvBXTVqksM0wSaqd19N0Sg&autoplay=1';
+  }
+
+  if (liveUrl.includes('@ExplorePenguinsandPuffins')) {
+    return 'https://www.youtube.com/embed/live_stream?channel=UCyre4OfIuo5f-3vQ-c9BxzS&autoplay=1';
+  }
+
+  if (liveUrl.includes('@fauconcrecerelle')) {
+    return 'https://www.youtube.com/embed/live_stream?channel=UCGjtF72qHEOkEn-9PLf1t7g&autoplay=1';
   }
 
   return liveUrl;

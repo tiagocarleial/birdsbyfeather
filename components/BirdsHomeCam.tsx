@@ -109,6 +109,26 @@ export default function BirdsHomeCam({
       return 'https://www.youtube.com/embed/live_stream?channel=UCob_chLKvtrcg8KE-KpQiig&autoplay=1';
     }
 
+    // For RSPB (Multi-camera)
+    if (liveUrl.includes('RSPBvideo')) {
+      return 'https://www.youtube.com/embed/live_stream?channel=UCl8QdQ9ZaBT65tF1yOmbMBQ&autoplay=1';
+    }
+
+    // For Kotkaklubi (White Stork)
+    if (liveUrl.includes('@Kotkaklubi')) {
+      return 'https://www.youtube.com/embed/live_stream?channel=UCCvBXTVqksM0wSaqd19N0Sg&autoplay=1';
+    }
+
+    // For Explore Penguins and Puffins
+    if (liveUrl.includes('@ExplorePenguinsandPuffins')) {
+      return 'https://www.youtube.com/embed/live_stream?channel=UCyre4OfIuo5f-3vQ-c9BxzS&autoplay=1';
+    }
+
+    // For Faucon Crecerelle (Peregrine Falcon)
+    if (liveUrl.includes('@fauconcrecerelle')) {
+      return 'https://www.youtube.com/embed/live_stream?channel=UCGjtF72qHEOkEn-9PLf1t7g&autoplay=1';
+    }
+
     // If it's already an embed URL, return as-is
     if (liveUrl.includes('/embed/')) {
       return liveUrl;

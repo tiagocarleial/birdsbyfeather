@@ -38,10 +38,15 @@ export default function FilterBar({ species, selectedSpecies, onFilterChange }: 
             }`}
           >
             {sp === 'Bald Eagle' && <i className="fa-solid fa-dove mr-2"></i>}
+            {sp === 'White-tailed Eagle' && <i className="fa-solid fa-dove mr-2"></i>}
             {sp === 'Blue Tit' && <i className="fa-solid fa-feather-pointed mr-2"></i>}
             {sp === 'Common Kestrel' && <i className="fa-solid fa-crow mr-2"></i>}
             {sp === 'Osprey' && <i className="fa-solid fa-fish mr-2"></i>}
-            {sp !== 'Bald Eagle' && sp !== 'Blue Tit' && sp !== 'Common Kestrel' && sp !== 'Osprey' && <i className="fa-solid fa-feather mr-2"></i>}
+            {sp === 'White Stork' && <i className="fa-solid fa-egg mr-2"></i>}
+            {sp === 'Peregrine Falcon' && <i className="fa-solid fa-jet-fighter mr-2"></i>}
+            {sp === 'Various Birds' && <i className="fa-solid fa-birds mr-2"></i>}
+            {sp === 'Multi-Camera' && <i className="fa-solid fa-camera mr-2"></i>}
+            {!['Bald Eagle', 'White-tailed Eagle', 'Blue Tit', 'Common Kestrel', 'Osprey', 'White Stork', 'Peregrine Falcon', 'Various Birds', 'Multi-Camera'].includes(sp) && <i className="fa-solid fa-feather mr-2"></i>}
             {sp}
           </button>
         ))}
@@ -90,8 +95,15 @@ export default function FilterBar({ species, selectedSpecies, onFilterChange }: 
                 }`}
               >
                 {sp === 'Bald Eagle' && <i className="fa-solid fa-dove mr-2"></i>}
+                {sp === 'White-tailed Eagle' && <i className="fa-solid fa-dove mr-2"></i>}
                 {sp === 'Blue Tit' && <i className="fa-solid fa-feather-pointed mr-2"></i>}
-                {sp !== 'Bald Eagle' && sp !== 'Blue Tit' && <i className="fa-solid fa-feather mr-2"></i>}
+                {sp === 'Common Kestrel' && <i className="fa-solid fa-crow mr-2"></i>}
+                {sp === 'Osprey' && <i className="fa-solid fa-fish mr-2"></i>}
+                {sp === 'White Stork' && <i className="fa-solid fa-egg mr-2"></i>}
+                {sp === 'Peregrine Falcon' && <i className="fa-solid fa-jet-fighter mr-2"></i>}
+                {sp === 'Various Birds' && <i className="fa-solid fa-birds mr-2"></i>}
+                {sp === 'Multi-Camera' && <i className="fa-solid fa-camera mr-2"></i>}
+                {!['Bald Eagle', 'White-tailed Eagle', 'Blue Tit', 'Common Kestrel', 'Osprey', 'White Stork', 'Peregrine Falcon', 'Various Birds', 'Multi-Camera'].includes(sp) && <i className="fa-solid fa-feather mr-2"></i>}
                 {sp}
               </button>
             ))}
