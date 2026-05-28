@@ -161,6 +161,7 @@ export default function HomePage() {
       description: "Watch multiple bird species from RSPB's live camera network. Features swift, osprey, goshawk, and goldeneye nests. Switch between different nest cameras to observe various birds in their natural habitats.",
       location: "United Kingdom",
       thumbnail: "https://i.ytimg.com/vi/3VVoYO-ZFPE/hqdefault.jpg",
+      videoId: "eAaBgV2kgro",
       channelName: "RSPBvideo"
     },
     {
@@ -172,6 +173,7 @@ export default function HomePage() {
       description: "Watch white storks at their nest in Estonia. Kotkaklubi (Eagle Club) has been running live cameras on protected bird species nests since 2007, providing a unique window into the lives of these magnificent birds.",
       location: "Estonia",
       thumbnail: "https://i.ytimg.com/vi/ldThVtNVYJQ/hqdefault.jpg",
+      videoId: "qbkEpXowA2o",
       channelName: "Kotkaklubi"
     },
     {
@@ -183,6 +185,7 @@ export default function HomePage() {
       description: "Watch multiple bird species from Kotkaklubi's camera network in Estonia. Features live cameras on eagles (white-tailed, spotted, golden), ospreys, and storks. Experience diverse Estonian wildlife from one premier conservation organization.",
       location: "Estonia",
       thumbnail: "https://i.ytimg.com/vi/7uUmdtXSgwU/hqdefault.jpg",
+      videoId: "qbkEpXowA2o",
       channelName: "Kotkaklubi"
     },
     {
@@ -194,6 +197,7 @@ export default function HomePage() {
       description: "Watch penguins and puffins through Explore.org's live camera network. Observe these charming seabirds in their natural habitats, featuring both Antarctic penguins and Atlantic puffins from various locations around the world.",
       location: "Multiple Locations",
       thumbnail: "https://i.ytimg.com/vi/sWQtnUoBy1w/hqdefault.jpg",
+      videoId: "F5yLGZp5nsA",
       channelName: "Explore Penguins and Puffins"
     },
     {
@@ -205,6 +209,7 @@ export default function HomePage() {
       description: "Watch peregrine falcons at their nest through this French wildlife camera. Observe these incredible aerial hunters as they hunt, nest, and raise their young with stunning detail and expert monitoring.",
       location: "France",
       thumbnail: "https://i.ytimg.com/vi/TmgP8BhtffE/hqdefault.jpg",
+      videoId: "DSQxEryTLw8",
       channelName: "Faucon Crécerelle"
     }
   ];
