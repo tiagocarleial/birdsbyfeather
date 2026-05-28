@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import Link from 'next/link';
 
 interface Product {
@@ -13,6 +13,14 @@ interface Product {
   features: string[];
 }
 
+interface FeaturedBirdCard {
+  id: string;
+  title: string;
+  description: string;
+  thumbnail: string;
+  videoId: string;
+}
+
 interface AmazonAffiliateBannerProps {
   product?: Product;
 }
@@ -23,6 +31,58 @@ interface AmazonAffiliateBannerProps {
  */
 export default function AmazonAffiliateBanner({ product: customProduct }: AmazonAffiliateBannerProps) {
   const [isHovered, setIsHovered] = useState(false);
+
+  // Featured bird cards pool
+  const featuredBirds: FeaturedBirdCard[] = [
+    {
+      id: 'fobb-bald-eagle',
+      title: 'FOBB Bald Eagle Nest',
+      description: 'Watch eagles raise their young live',
+      thumbnail: 'https://i.ytimg.com/vi/B4-L2nfGcuE/hqdefault.jpg',
+      videoId: 'B4-L2nfGcuE',
+    },
+    {
+      id: 'dale-hollow-eagle',
+      title: 'Dale Hollow Eagle Nest',
+      description: 'Majestic bald eagles in natural habitat',
+      thumbnail: 'https://i.ytimg.com/vi/8aaFcTNcCLA/maxresdefault.jpg',
+      videoId: '8aaFcTNcCLA',
+    },
+    {
+      id: 'uist-white-tailed-eagle',
+      title: 'Uist White-tailed Eagle',
+      description: 'Sea eagles in Scottish Highlands',
+      thumbnail: 'https://i.ytimg.com/vi/aivQQnNPwZ8/hqdefault.jpg',
+      videoId: 'aivQQnNPwZ8',
+    },
+    {
+      id: 'cornell-bird-cams',
+      title: 'Cornell Bird Cams Live',
+      description: 'Variety of birds at Cornell Lab',
+      thumbnail: 'https://i.ytimg.com/vi/BRNsaDSzpnk/hqdefault.jpg',
+      videoId: 'BRNsaDSzpnk',
+    },
+    {
+      id: 'ashgrove-peregrine',
+      title: 'Peregrine Falcon Nest',
+      description: "World's fastest birds in action",
+      thumbnail: 'https://i.ytimg.com/vi/TmgP8BhtffE/hqdefault.jpg',
+      videoId: 'TmgP8BhtffE',
+    },
+    {
+      id: 'forestry-england-osprey',
+      title: 'Forestry England Osprey',
+      description: 'Fish hawks in UK forest setting',
+      thumbnail: 'https://i.ytimg.com/vi/d2HIkb2BHdw/hq720.jpg',
+      videoId: 'd2HIkb2BHdw',
+    },
+  ];
+
+  // Randomize featured bird on component mount (stable across re-renders)
+  const randomBird = useMemo(() => {
+    const randomIndex = Math.floor(Math.random() * featuredBirds.length);
+    return featuredBirds[randomIndex];
+  }, []);
 
   // Default product (Bald Eagle Plushie Set)
   const defaultProduct: Product = {
@@ -45,21 +105,21 @@ export default function AmazonAffiliateBanner({ product: customProduct }: Amazon
           <div className="grid md:grid-cols-12 gap-4">
             {/* Left Side - Featured Bird Cam Card */}
             <div className="md:col-span-4">
-              <Link href="/bird/fobb-bald-eagle">
+              <Link href={`/bird/${randomBird.id}`}>
                 <div className="bg-gray-800 border-2 border-green-500/30 rounded-xl overflow-hidden hover:border-green-500/60 transition-all duration-300 h-full">
                   {/* Featured Badge */}
                   <div className="bg-gradient-to-r from-green-600 to-emerald-600 px-3 py-2 text-center">
                     <p className="text-white text-xs font-bold flex items-center justify-center gap-2">
                       <i className="fa-solid fa-video"></i>
-                      <span>WATCH LIVE BALD EAGLES</span>
+                      <span>WATCH LIVE BIRDS</span>
                     </p>
                   </div>
 
                   {/* Thumbnail */}
                   <div className="relative aspect-video">
                     <img
-                      src="https://i.ytimg.com/vi/B4-L2nfGcuE/hqdefault.jpg"
-                      alt="FOBB Bald Eagle Nest"
+                      src={randomBird.thumbnail}
+                      alt={randomBird.title}
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute top-2 left-2">
@@ -72,8 +132,8 @@ export default function AmazonAffiliateBanner({ product: customProduct }: Amazon
 
                   {/* Info */}
                   <div className="p-3">
-                    <h3 className="text-white font-bold text-sm mb-1">FOBB Bald Eagle Nest</h3>
-                    <p className="text-gray-400 text-xs mb-2">Watch eagles raise their young live</p>
+                    <h3 className="text-white font-bold text-sm mb-1">{randomBird.title}</h3>
+                    <p className="text-gray-400 text-xs mb-2">{randomBird.description}</p>
                     <div className="inline-flex items-center gap-1 text-green-400 text-xs font-semibold">
                       <span>Watch Now</span>
                       <i className="fa-solid fa-arrow-right text-[10px]"></i>
