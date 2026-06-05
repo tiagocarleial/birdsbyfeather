@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import AmazonModalBanner from './AmazonModalBanner';
 
 interface VideoCardProps {
   videoId: string;
@@ -117,69 +116,58 @@ export default function VideoCard({
               <i className="fa-solid fa-times text-3xl"></i>
             </button>
 
-            {/* Grid Layout: Banner + Video */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-              {/* Left Side - Amazon Banner (Vertical) */}
-              <div className="hidden md:block md:col-span-3">
-                <AmazonModalBanner />
+            {/* Video Player */}
+            <div className="aspect-video bg-black rounded-lg overflow-hidden relative">
+              {/* Loading Spinner */}
+              {videoLoading && (
+                <div className="absolute inset-0 flex items-center justify-center bg-gray-900 z-10">
+                  <div className="text-center">
+                    <div className="inline-block animate-spin rounded-full h-16 w-16 border-4 border-gray-600 border-t-green-500 mb-4"></div>
+                    <p className="text-gray-400 text-sm">Loading video...</p>
+                  </div>
+                </div>
+              )}
+
+              <iframe
+                className="w-full h-full"
+                src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                title={title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                onLoad={() => setVideoLoading(false)}
+              ></iframe>
+            </div>
+
+            {/* Info Bar */}
+            <div className="mt-4 space-y-3">
+              <div className="flex items-center justify-between text-sm">
+                <div className="flex items-center gap-3">
+                  <i className="fa-brands fa-youtube text-red-500"></i>
+                  <span className="text-white font-semibold">{title}</span>
+                </div>
+                <a
+                  href={`https://www.youtube.com/watch?v=${videoId}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
+                >
+                  <i className="fa-brands fa-youtube"></i>
+                  Watch on YouTube
+                </a>
               </div>
 
-              {/* Right Side - Video Player */}
-              <div className="md:col-span-9">
-                {/* Video Player */}
-                <div className="aspect-video bg-black rounded-lg overflow-hidden relative">
-                  {/* Loading Spinner */}
-                  {videoLoading && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-gray-900 z-10">
-                      <div className="text-center">
-                        <div className="inline-block animate-spin rounded-full h-16 w-16 border-4 border-gray-600 border-t-green-500 mb-4"></div>
-                        <p className="text-gray-400 text-sm">Loading video...</p>
-                      </div>
-                    </div>
-                  )}
-
-                  <iframe
-                    className="w-full h-full"
-                    src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-                    title={title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    onLoad={() => setVideoLoading(false)}
-                  ></iframe>
-                </div>
-
-                {/* Info Bar */}
-                <div className="mt-4 space-y-3">
-                  <div className="flex items-center justify-between text-sm">
-                    <div className="flex items-center gap-3">
-                      <i className="fa-brands fa-youtube text-red-500"></i>
-                      <span className="text-white font-semibold">{title}</span>
-                    </div>
-                    <a
-                      href={`https://www.youtube.com/watch?v=${videoId}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
-                    >
-                      <i className="fa-brands fa-youtube"></i>
-                      Watch on YouTube
-                    </a>
+              {/* Attribution Notice */}
+              <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0">
+                    <i className="fa-brands fa-youtube text-red-500 text-2xl"></i>
                   </div>
-
-                  {/* Attribution Notice */}
-                  <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
-                    <div className="flex items-start gap-3">
-                      <div className="flex-shrink-0">
-                        <i className="fa-brands fa-youtube text-red-500 text-2xl"></i>
-                      </div>
-                      <div className="flex-1">
-                        <p className="text-gray-300 text-sm leading-relaxed">
-                          <span className="font-semibold text-white">Original Content:</span> This video belongs to and is operated by{' '}
-                          <span className="text-green-400 font-semibold">{channelName}</span>
-                          {' '}on YouTube. We are not copying or redistributing the content - just displaying the original public video directly from the source.
-                        </p>
-                      </div>
-                    </div>
+                  <div className="flex-1">
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      <span className="font-semibold text-white">Original Content:</span> This video belongs to and is operated by{' '}
+                      <span className="text-green-400 font-semibold">{channelName}</span>
+                      {' '}on YouTube. We are not copying or redistributing the content - just displaying the original public video directly from the source.
+                    </p>
                   </div>
                 </div>
               </div>

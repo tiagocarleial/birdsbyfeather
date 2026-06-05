@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import AmazonModalBanner from './AmazonModalBanner';
 
 interface BirdsHomeCamProps {
   id: string; // Unique ID for the bird cam
@@ -241,17 +240,8 @@ export default function BirdsHomeCam({
               <i className="fa-solid fa-times text-3xl"></i>
             </button>
 
-            {/* Grid Layout: Banner + Video */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-              {/* Left Side - Amazon Banner (Vertical) */}
-              <div className="hidden md:block md:col-span-3">
-                <AmazonModalBanner />
-              </div>
-
-              {/* Right Side - Video Player */}
-              <div className="md:col-span-9">
-                {/* Video Player */}
-                <div className="aspect-video bg-black rounded-lg overflow-hidden relative">
+            {/* Video Player */}
+            <div className="aspect-video bg-black rounded-lg overflow-hidden relative">
               {/* Loading Spinner */}
               {videoLoading && (
                 <div className="absolute inset-0 flex items-center justify-center bg-gray-900 z-10">
@@ -270,10 +260,10 @@ export default function BirdsHomeCam({
                 allowFullScreen
                 onLoad={() => setVideoLoading(false)}
               ></iframe>
-                </div>
+            </div>
 
-                {/* Info Bar */}
-                <div className="mt-4 space-y-3">
+            {/* Info Bar */}
+            <div className="mt-4 space-y-3">
                   <div className="flex items-center justify-between text-sm">
                     <div className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
@@ -312,8 +302,6 @@ export default function BirdsHomeCam({
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

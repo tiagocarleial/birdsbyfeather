@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import AmazonModalBanner from './AmazonModalBanner';
 
 interface FeaturedVideoCardProps {
   videoId: string;
@@ -40,10 +39,8 @@ export default function FeaturedVideoCard({
             </div>
           </div>
 
-          {/* Grid Container */}
-          <div className="grid md:grid-cols-12 gap-6">
-            {/* Left Side - Featured Video Card */}
-            <div className="md:col-span-8">
+          {/* Featured Video Card */}
+          <div>
               <div
                 onClick={handleOpenModal}
                 onMouseEnter={() => setIsHovered(true)}
@@ -143,98 +140,6 @@ export default function FeaturedVideoCard({
                 </div>
               </div>
             </div>
-
-            {/* Right Side - Amazon Banner */}
-            <div className="md:col-span-4">
-              <div className="sticky top-24">
-                {/* Vertical Amazon Product Card */}
-                <a
-                  href="https://www.amazon.com/BENINY-Stuffed-Animal-Eagles-Plushie/dp/B0DJX7V7WL?crid=121VN7GOPU2UD&dib=eyJ2IjoiMSJ9.eArfolrEEflP8NFcMjnN6ziaXwuRAAAZsMLAxJ6q3--2mq09Nh0ZNW39vA8ZEjKH3gREOGAyWwfOgZQHP0_jTXLad841RJcwvhMdlwvQqYK8h6v4X18m-GO7ZJJRHUduOx5yoYg9TikDc51mMr08x140UrferOLBuxRqlIxqTtzgDf69jsTZnQzUKJhdtP_AWU4NlNr99SYP0Yye73bLcUh7n3QJCWN4lX3I88PFTUIA_YjBYi9d3fI7S4hQH5ZSNZZDoxDxkmAR5xafUU2YKbSTSCv2dSzewDFAK5lpRro.ss8jQstXX-N9iHm7xtFxObop-4Nt2dMGLaUr6c6MrNQ&dib_tag=se&keywords=BENINY%2B4Pcs%2BBald%2BEagle%2BStuffed%2BAnimal%2C%2B18%2BInch%2BMommy%2BEagle%2BPlush%2Bwith%2B3%2BBaby%2BChicks%2C%2BStuffed%2BBald%2BEagle%2BPlushie%2BToy%2BGifts%2Bfor%2BKids&nsdOptOutParam=true&qid=1779985743&sprefix=beniny%2B4pcs%2Bbald%2Beagle%2Bstuffed%2Banimal%2C%2B18%2Binch%2Bmommy%2Beagle%2Bplush%2Bwith%2B3%2Bbaby%2Bchicks%2C%2Bstuffed%2Bbald%2Beagle%2Bplushie%2Btoy%2Bgifts%2Bfor%2Bkids%2Caps%2C308&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=tiagoolivei07-20&linkId=e437b5c73187a573eb21283c7875f1e0&language=en_US&ref_=as_li_ss_tl"
-                  target="_blank"
-                  rel="noopener noreferrer sponsored"
-                  className="block"
-                >
-                  <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 border-2 border-green-500/30 rounded-xl overflow-hidden transition-all duration-300 shadow-lg hover:border-green-500/60 hover:shadow-2xl hover:shadow-green-500/20 h-full flex flex-col">
-                    {/* Badge */}
-                    <div className="absolute top-3 left-3 z-10">
-                      <div className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
-                        <i className="fa-solid fa-star text-xs"></i>
-                        <span>Popular</span>
-                      </div>
-                    </div>
-
-                    {/* Amazon Logo */}
-                    <div className="absolute top-3 right-3 z-10">
-                      <div className="bg-white px-3 py-1.5 rounded-md shadow-lg">
-                        <img
-                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/960px-Amazon_logo.svg.png"
-                          alt="Amazon"
-                          className="h-4 w-auto"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Product Image */}
-                    <div className="flex items-center justify-center p-8 pt-16 pb-6">
-                      <img
-                        src="https://m.media-amazon.com/images/I/71pyYE98R5L._AC_SL1500_.jpg"
-                        alt="BENINY Bald Eagle Plush Set"
-                        className="w-full h-auto max-w-[240px] mx-auto"
-                      />
-                    </div>
-
-                    {/* Product Details */}
-                    <div className="flex-1 flex flex-col justify-end p-6 pt-2 gap-3">
-                      {/* Product Name */}
-                      <h3 className="text-xl font-bold text-white leading-tight text-center">
-                        BENINY Bald Eagle Plush Set
-                      </h3>
-
-                      {/* Description */}
-                      <p className="text-gray-300 text-sm text-center">
-                        18" Mommy Eagle with 3 Baby Chicks - Perfect gift for bird lovers
-                      </p>
-
-                      {/* Features */}
-                      <div className="flex flex-col gap-2">
-                        <div className="bg-blue-500/20 border border-blue-500/40 rounded-md px-3 py-2 text-blue-300 text-sm font-medium flex items-center justify-center gap-2">
-                          <i className="fa-solid fa-box text-xs"></i>
-                          <span>4 Pieces Total</span>
-                        </div>
-                        <div className="bg-purple-500/20 border border-purple-500/40 rounded-md px-3 py-2 text-purple-300 text-sm font-medium flex items-center justify-center gap-2">
-                          <i className="fa-solid fa-heart text-xs"></i>
-                          <span>Soft & Cuddly</span>
-                        </div>
-                        <div className="bg-green-500/20 border border-green-500/40 rounded-md px-3 py-2 text-green-300 text-sm font-medium flex items-center justify-center gap-2">
-                          <i className="fa-solid fa-gift text-xs"></i>
-                          <span>Great Gift</span>
-                        </div>
-                      </div>
-
-                      {/* CTA Button */}
-                      <div className="mt-2">
-                        <div className="flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold text-base transition-all duration-300 hover:shadow-lg hover:shadow-green-500/50 hover:scale-105 shadow-md">
-                          <span>View on Amazon</span>
-                          <i className="fa-solid fa-arrow-right text-sm"></i>
-                        </div>
-                      </div>
-
-                      {/* Prime Badge */}
-                      <div className="flex items-center justify-center gap-2 text-blue-400 text-xs mt-2">
-                        <i className="fa-solid fa-shipping-fast"></i>
-                        <span className="font-medium">Prime Eligible</span>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-
-                {/* Disclaimer */}
-                <p className="text-center text-gray-500 text-xs mt-3">
-                  As an Amazon Associate, we earn from qualifying purchases.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -256,17 +161,8 @@ export default function FeaturedVideoCard({
               <i className="fa-solid fa-times text-3xl"></i>
             </button>
 
-            {/* Grid Layout: Banner + Video */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-              {/* Left Side - Amazon Banner (Vertical) */}
-              <div className="hidden md:block md:col-span-3">
-                <AmazonModalBanner />
-              </div>
-
-              {/* Right Side - Video Player */}
-              <div className="md:col-span-9">
-                {/* Video Player */}
-                <div className="aspect-video bg-black rounded-lg overflow-hidden relative">
+            {/* Video Player */}
+            <div className="aspect-video bg-black rounded-lg overflow-hidden relative">
                   {/* Loading Spinner */}
                   {videoLoading && (
                     <div className="absolute inset-0 flex items-center justify-center bg-gray-900 z-10">
@@ -285,10 +181,10 @@ export default function FeaturedVideoCard({
                     allowFullScreen
                     onLoad={() => setVideoLoading(false)}
                   ></iframe>
-                </div>
+            </div>
 
-                {/* Info Bar */}
-                <div className="mt-4 space-y-3">
+            {/* Info Bar */}
+            <div className="mt-4 space-y-3">
                   <div className="flex items-center justify-between text-sm">
                     <div className="flex items-center gap-3">
                       <i className="fa-brands fa-youtube text-red-500"></i>
@@ -320,8 +216,6 @@ export default function FeaturedVideoCard({
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
